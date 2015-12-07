@@ -7,6 +7,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/jquery.bxslider.css" rel="stylesheet"/>
     <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <!-- bxSlider Javascript file -->
     <script src="js/jquery.bxslider.min.js"></script>
     <!-- bxSlider CSS file -->
@@ -19,67 +20,54 @@
     <script src="js/respond.js"/></script>
     <![endif]-->
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('.bxslider').bxSlider({
-                mode: 'fade',
-                captions: false
-            });
+    $(document).ready(function () {
+        $('.bxslider').bxSlider({
+            mode: 'fade',
+            captions: false
         });
+    });
     </script>
 </head>
 <body>
 <div class="wrapper">
     <div class="header">
         <div class="site-top">
-            <div class="navbar-brand">
-                <a href="#" target="_self">
-                    <img alt="Home" title="Home" src="images/layout/logo.png">
-                    <span>The Best-Run Business Run SAP</span></a>
-            </div>
-
-            <ul class="main-menu">
-                <li><a class="button_mobile_menu" href="#"></a>
-                    <ul class="sub-menu">
-                        <li><a href="#">Overview</a></li>
-                        <li><a href="#">Platform</a></li>
-                        <li><a href="#">Developers</a></li>
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Marketplace</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-
-            <!--<div class="navbar-mobile-menu">-->
-            <!--<a class="button_mobile_menu" href="#"></a>-->
-            <!--<div class="nav">-->
-            <!--<ul>-->
-            <!--<li><a href="#">Overview</a></li>-->
-            <!--<li><a href="#">Platform</a></li>-->
-            <!--<li><a href="#">Developers</a></li>-->
-            <!--<li><a href="#">Partners</a></li>-->
-            <!--<li><a href="#">Marketplace</a></li>-->
-            <!--</ul>-->
-            <!--</div>-->
-            <!--</div>-->
-
-            <div class="navbar-search">
-                <form action="#">
-                    <input type="text" class="input" placeholder="Search">
-                    <input type="submit" value="">
-                </form>
-            </div>
-            <div class="navbar-contact">
-                <p>+1 866 727-1482</p>
-            </div>
-
-            <div class="site-navigation">
-
-            </div>
+        <div class="navbar-brand">
+            <a href="#" target="_self">
+                <img alt="Home" title="Home" src="images/layout/logo.png">
+                <span>The Best-Run Business Run SAP</span></a>
         </div>
 
+        <ul id="sub-menu2">
+            <li>
+                <a class="button_mobile_menu" href="#"></a>
+                <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Platform</a></li>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="navbar-search">
+            <form action="#">
+                <input type="text" class="input" placeholder="Search">
+                <input type="submit" value="">
+            </form>
+        </div>
+        <div class="navbar-contact">
+            <p>+1 866 727-1482</p>
+        </div>
+
+    </div>
+
         <div class="home-slide">
-            <h3>SAP HANA Cloud Partners SAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud Partners</h3>
+            <h3>SAP HANA Cloud Partners SAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA
+                Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud
+                PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP HANA Cloud PartnersSAP
+                HANA Cloud Partners</h3>
             <a class="headering" href="#">Boundless Boundless </a>
 
             <p></p>
@@ -104,6 +92,7 @@
                 <p>Name name</p>
             </div>
         </div>
+    </div>
 
         <div class="benefits-slider">
             <ul class="bxslider">

@@ -37,6 +37,7 @@ img {
 a {
     color: #0ebaf2;
     outline: none;
+    text-decoration: none;
 }
 
 a:hover {
@@ -101,6 +102,78 @@ aside, nav, footer, header, section {
 }
 /*End Button*/
 
+/*Menu responce*/
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 10px auto;
+}
+.toggleMenu {
+    display:  none;
+    background: #666;
+    padding: 10px 15px;
+    color: #fff;
+}
+.nav-responce {
+    list-style: none;
+    *zoom: 1;
+    background:#175e4c;
+}
+.nav-responce:before,
+.nav-responce:after {
+    content: " ";
+    display: table;
+}
+.nav-responce:after {
+    clear: both;
+}
+.nav-responce ul {
+    list-style: none;
+    width: 9em;
+}
+.nav-responce a {
+    padding: 10px 15px;
+    color:#fff;
+}
+.nav-responce li {
+    position: relative;
+}
+.nav-responce > li {
+    float: left;
+    border-top: 1px solid #104336;
+}
+.nav-responce > li > .parent {
+    background-image: url("images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.nav-responce > li > a {
+    display: block;
+}
+.nav-responce li  ul {
+    position: absolute;
+    left: -9999px;
+}
+.nav-responce > li.hover > ul {
+    left: 0;
+}
+.nav-responce li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+.nav-responce li li a {
+    display: block;
+    background: #1d7a62;
+    position: relative;
+    z-index:100;
+    border-top: 1px solid #175e4c;
+}
+.nav-responce li li li a {
+    background:#249578;
+    z-index:200;
+    border-top: 1px solid #1d7a62;
+}
+/*end menu responce*/
 /* меню */
 .nav {
     margin: 20px 0;
@@ -128,6 +201,29 @@ aside, nav, footer, header, section {
 }
 
 @media screen and (max-width: 800px) {
+    .active {
+        display: block;
+    }
+    .nav-responce > li {
+        float: none;
+    }
+    .nav-responce > li > .parent {
+        background-position: 95% 50%;
+    }
+    .nav-responce li li .parent {
+        background-image: url("images/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+    .nav-responce ul {
+        display: block;
+        width: 100%;
+    }
+    .nav-responce > li.hover > ul , .nav-responce li li.hover ul {
+        position: static;
+    }
+
+
     .nav {
         display: none;
         position: absolute;
@@ -268,6 +364,7 @@ aside, nav, footer, header, section {
 .button_mobile_menu{
     display: inline-block;
     float: none;
+    box-sizing: border-box;
     text-decoration: none;
     height: 34px;
     width: 34px;
@@ -279,8 +376,9 @@ aside, nav, footer, header, section {
     line-height: 36px;
 }
 
-.button_mobile_menu:hover div {
-    display: block;
+.button_mobile_menu > a:hover .sub-menu /*div*/{
+    /*display: block;*/
+    opacity: 1;
 }
 
 .main_menu_item a{
@@ -314,23 +412,116 @@ aside, nav, footer, header, section {
     position: relative;
 }
 
-.main-menu .sub-menu {
+
+
+/*222....*/
+/*------------------------------------*\
+	NAVIGATION
+\*------------------------------------*/
+#sub-menu2{
+    float: right;
+    width: 55px;
+    padding: 0;
+    list-style: none;
+}
+#sub-menu2 li{
+    float:right;
+    font: 400 1.0em/21px BentonSans, sans-serif;
+    padding: 5px 5px 0px 2px;
+    position:relative;
+    display:block;
+}
+#sub-menu2 li a{
+    text-decoration: none;
+    padding: 7px 19px;
+    color: #e8e8e8;
+    display:block;
+}
+#sub-menu2 li a:hover{
+    column-rule: black;
+    text-decoration:none;
+}
+
+/*--- ВЫПАДАЮЩИЕ ПУНКТЫ ---*/
+#sub-menu2 ul{
+    list-style:none;
+    position:fixed;
+    left:-9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+    opacity:0; /* Устанавливаем начальное состояние прозрачности */
+    -webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+}
+#sub-menu2 ul li{
+    padding-top:0px;  /*Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню*/
+    float:none;
+}
+#sub-menu2 ul a{
+    white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+    display:block;
+    width: 767px;
+}
+#sub-menu2 li:hover ul{  /*Выводим выпадающий пункт при наведении курсора*/
+    float: left;
+    left: 0px;
+    opacity:1;  Делаем непрозрачным
+    font: 400 1.25em BentonSans, sans-serif;
+    z-index: 5000;
+    -webkit-transition:-webkit-transform 1.0s linear;
+}
+
+#sub-menu2 li:hover .home-slide {
+    padding-top: 150px;
+}
+
+#sub-menu2 li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+    text-decoration:none;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+#sub-menu2 li:hover ul a{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+    text-decoration:none;
+}
+
+#sub-menu2 li:hover ul li a:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
+    text-decoration:none;
+    background-color: #f2aa0d;
+    color: #ffffff;
+}
+/*end navigation*/
+
+.sub-menu {
     /*display:none;*/
     opacity: 0;
+    float: left;
     -webkit-transition: opacity 0.5s ease-in-out;
     -moz-transition: opacity 0.5s ease-in-out;
     -ms-transition: opacity 0.5s ease-in-out;
     -o-transition: opacity 0.5s ease-in-out;
     transition: opacity 0.5s ease-in-out;
     position: relative; /*fixed*/
+    box-sizing: border-box;
     top: 50px;
     left: 0px;
     z-index: 10;
     width: 100%;
+    height: 150px;
     margin: 0;
     padding: 0;
     list-style: none;
     background-color: #ffffff;
+}
+
+.sub-menu a {
+    display: block;
+    margin-bottom: -1px;
+    padding: 8px 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.sub-menu a:hover {
+    opacity: 0.7;
+    color: #ffffff;
 }
 
 
@@ -344,6 +535,10 @@ aside, nav, footer, header, section {
     opacity: 1;
 }
 
+.main-menu > li:hover .home-slide {
+    padding-top: 150px;
+}
+
 .sub-menu li:hover {
     background-color: #f2aa0d;
     color: #ffffff;
@@ -352,6 +547,7 @@ aside, nav, footer, header, section {
 /*HOME*/
 
 .home-slide {
+    padding-top: 0px;
     display: block;
     height: 563px;
     width: 100%;
@@ -391,7 +587,8 @@ aside, nav, footer, header, section {
     margin-left: 30px;
     width: 254px;
     height: 230px;
-    background-color: #ffffff;
+    background: url("../images/layout/home-top-content.png") repeat;
+    /*background-color: #ffffff;*/
 }
 
 .home-top-content p {
