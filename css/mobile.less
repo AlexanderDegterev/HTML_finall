@@ -1,0 +1,469 @@
+@media screen and (max-width: 800px) {
+
+  /* Layout
+  ----------------------------------*/
+
+  .wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  .header {
+    background-color: #ffffff;
+  }
+  .site-top {
+    height: 59px;
+
+    .navbar-brand {
+      display: inline-block;
+      float: left;
+      height: 39px;
+      width: 50%;
+      padding: 10px 0px 0px 30px;
+      color: #fff;
+      text-shadow: none;
+      box-sizing: border-box;
+
+      img {
+        float: left;
+      }
+
+      span {
+        display: none;
+        float: left;
+        color: #000;
+        padding-top: 2%;
+        text-decoration: none;
+      }
+    }
+
+    .navbar-contact {
+      display: inline-block;
+      float:right;
+      color: #000;
+      margin: 19px 10px 0 10px;
+      font: 19px 'BentonSans-Bold', sans-serif;
+    }
+
+    .navbar-search {
+      display: inline-block;
+      float:right;
+      margin-right: 50px;
+
+      form {
+        overflow: hidden;
+      }
+
+      input {
+        float: left;
+      }
+
+      input[type="submit"] {
+        margin: 14px 10px 0 10px;
+        width: 34px;
+        height: 34px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: url("../images/layout/search.png") no-repeat;
+      }
+
+      input[type="text"] {
+        display: none;
+        margin: 17px auto;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .site-top.navbar-search {
+    display: inline-block;
+    float:right;
+    margin-right: 50px;
+  }
+  /*------------------------------------*\
+      NAVIGATION
+  \*------------------------------------*/
+  .button_mobile_menu {
+    position: absolute;
+    display: block;
+    float: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 14px 10px 0 10px;
+    right: 0%;
+    top:0px;
+    height: 50px;
+    width: 34px;
+    background: url("../images/layout/button_menu_mobile.png") no-repeat;
+    text-align: center;
+    text-overflow: ellipsis;
+    font: normal 13px Helvetica Neue, sans-serif;
+    line-height: 36px;
+    cursor: pointer;
+  }
+  .menu-mobile {
+    list-style: outside none none;
+    overflow: auto;
+    padding: 0;
+    li {
+//      background-color: #ffffff;
+      background: url("../images/layout/mobile-menu-background.png") repeat-x;
+      padding: 10px 0;
+      a {
+        font: bold 1.5em/21px 'BentonSans', sans-serif;
+        color: #000000;
+        padding-left: 15px;
+      }
+    }
+    li:hover {
+      text-decoration:none;
+      color: #ffffff;
+      background: none;
+      background-color: #f1ac12;
+      a {
+        color: #ffffff;
+      }
+    }
+  }
+  .menu-mobile, #go {
+    display:none;
+    height: 250px;
+  }
+  .st {
+    padding:0 20px 0 20px;
+    background:green;
+    cursor:pointer;
+    color:white;
+  }
+  #go:checked  ~ .menu-mobile {
+    display:block;
+    transition: height 0.5s;
+    -o-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+  }
+  /*End menu new*/
+
+
+  /*HOME*/
+  .home-slide {
+    padding-top: 0px;
+    display: block;
+    height: 563px;
+    width: 100%;
+    background: url("../images/layout/Home_top.jpg") no-repeat center;
+    h3 {
+      margin-bottom: 15px;
+      padding: 34px 29px 0px;
+      max-width: 500px;
+      font: 400 26px 'BentonSans-Medium', sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .headering {
+      display: inline-block;
+      text-decoration: none;
+      height: 60px;
+      max-width: 300px;
+      padding: 0px 50px 0px 15px;
+      margin-bottom: 6px;
+      margin-left: 30px;
+      background-color: #000000;
+      color: white;
+      text-align: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font: normal 34px 'BentonSans' , sans-serif;
+      line-height: 60px;
+    }
+  }
+  .home-top-content {
+    overflow: hidden;
+    margin-left: 30px;
+    width: 254px;
+    height: 230px;
+    background: url("../images/layout/home-top-content.png") repeat;
+    :after {
+      height: 22px;
+      width: 100%;
+      content: " ";
+      text-shadow: none;
+      margin: -172px -193px;
+      position: absolute;
+      background: url("../images/layout/triangle-home-top-content.png") no-repeat ;
+    }
+    p {
+      margin: 27px;
+      font: normal 24px 'BentonSans' , sans-serif;
+    }
+  }
+  .home-content {
+    display: block;
+    height: 450px;
+    width: 100%;
+    font: normal 24px 'BentonSans' , sans-serif;
+    h2 {
+      margin: 62px 0px 0px 35px;
+      font: 32px 'BentonSans-Medium' , sans-serif;
+    }
+    p {
+      margin: 10px 75px 82px 34px;
+    }
+  }
+  .home-content-signature {
+    height: 191px;
+    width: 100%;
+    background: url("../images/layout/fon-home-content-signature.png") repeat;
+    :before {
+      height: 29px;
+      width: 100%;
+      content: " ";
+      text-shadow: none;
+      margin: -43px -43px;
+      position: absolute;
+      background: url("../images/layout/kov_1.png") no-repeat ;
+    }
+    :after {
+      height: 29px;
+      width: 100%;
+      content: " ";
+      text-shadow: none;
+      margin: 63px 200px;
+      position: absolute;
+      background: url("../images/layout/kov_2.png") no-repeat ;
+    }
+    p:first-child {
+      padding-top: 43px;
+      font: italic 22px 'BentonSans-Medium' , sans-serif;
+    }
+    p {
+      margin: 3% 10% 1% 20%;
+      font: 22px 'BentonSans-Medium' , sans-serif;
+      letter-spacing: 0px;
+      color: #494949;
+    }
+  }
+  .benefits-slider {
+    margin: 0 auto;
+    height: 750px;
+  }
+
+
+  /*END HOME*/
+  .programs {
+//    height: 1577px;
+    background: url("../images/layout/program.jpg") no-repeat center;
+    text-align: center;
+  }
+
+  .program {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: left;
+//    width: 580px;
+//    height: 680px;
+    margin: 11% 4% 0% 4%;
+    background-color: #ffffff;
+  }
+
+  .program-header {
+    overflow: hidden;
+//    height: 330px;
+  }
+
+  .program-wrapper {
+    margin: 0% 6%;
+
+  }
+
+  .program-header {
+    h2 {
+      margin: 6% 0% 10% 0%;
+      color: #000000;
+      font: 900 36px "BentonSans-Bold",sans-serif;
+      span {
+        font: 400 36px "BentonSans",sans-serif;
+        margin-left: 3% ;
+      }
+    }
+    h1 {
+      margin: 0 0% 3% 0%;
+      color: #f0ab00;
+      font: 900 53px "BentonSans-Bold",sans-serif;
+      span {
+        font: 400 53px "BentonSans",sans-serif;
+        margin-left: 3% ;
+      }
+    }
+    p {
+      font: 400 27px "BentonSans",sans-serif;
+      margin: 0 0 4%;
+    }
+  }
+
+  .program-content {
+    background-color: #000000;
+    overflow: hidden;
+//    height: 250px;
+    h1 {
+      margin: 0 0% 3% 0%;
+      padding-top: 7%;
+      color: #f0ab00;
+      font: 900 53px "BentonSans-Bold",sans-serif;
+      span {
+        font: 400 53px "BentonSans",sans-serif;
+        margin-left: 3% ;
+      }
+    }
+    p {
+      font: 400 27px "BentonSans",sans-serif;
+      color: #ffffff;
+      margin: 0 0 4%;
+    }
+  }
+
+  .program-join {
+    background-color: #00a1e4;
+    height: 100px;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    h2 {
+      font: 400 38px "BentonSans-Bold",sans-serif;
+      padding-top: 2%;
+      span {
+        font: 900 52px "SD_Helveticons",sans-serif;
+        margin-left: 3%;
+      }
+    }
+
+  }
+
+  .partners {
+    overflow: hidden;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+//    height: 975px;
+  }
+
+  .partner-header {
+    h1 {
+      font: 400 50px "BentonSans",sans-serif;
+      margin: 5% 10% 10% 10%;
+//      margin-bottom: 10%;
+//      margin-top: 5%;
+    }
+  }
+
+  .partner-slider {
+    height: 694px;
+//    width: 674px;
+    background: url("../images/layout/fon_partners_slider.jpg") no-repeat center;
+    text-align: center;
+  }
+
+  .partner-slider-wrapper {
+//    height: 566px;
+    margin: 0 auto;
+//    overflow: hidden;
+    padding-top: 72px;
+    position: relative;
+    text-align: left;
+    width: 480px;
+  }
+
+  .partner-footer {
+    height: 500px;
+    width: 100%;
+    background-color: beige;
+  }
+
+  /*menu test*/
+  nav[role="navigation"] {
+    width: 165px;
+//    background: #34495e;
+    height: 100px;
+    display: inline-block;
+    margin: 7% 0 -6% 14%;
+    font-family: 'bentonsans-bold', sans-serif;
+  }
+
+  nav[role="navigation"] a {
+    font-size: 25px;
+    color: #00a1e4;
+    text-decoration: none;
+    padding: 0 15px;
+    line-height: 35px;
+  }
+  nav[role="navigation"] li {width: 100%; height: auto; text-align: center; background: #bdc3c7; border: 1px solid #fff;padding: 10px 0;}
+//  nav[role="navigation"] span {font-size: 35px;}
+
+  .toggle span {
+    font: 400 25px "sd_helveticons",sans-serif;
+//    margin: 5% 10% 10% 10%;
+
+  }
+  .menu {display: none;}
+  /*end menu test*/
+
+  .icon_quote {
+    position: absolute;
+    margin: 6% 2% 0% 24%;
+    display: inline-block;
+    height: 54px;
+    width: 54px;
+     background: url("../images/layout/icon_quote.png") no-repeat center;;
+    }
+
+  .icon_video {
+    position: absolute;
+    margin: 5% 2% 0% 38%;
+    display: inline-block;
+    height: 54px;
+    width: 54px;
+    background: url("../images/layout/icon_video.png") no-repeat center;;
+  }
+
+  .already-partner {
+//    display: inline-block;
+    text-align: center;
+//    background-color: red;
+//    height: 100px;
+  }
+
+  .already-partner .header {
+    margin: 10% 0% 3% 0%;
+    h2 {
+      margin: 0% 10% 8% 10%;
+      color: #000000;
+//      text-align: center;
+      font: 900 36px "BentonSans-Bold",sans-serif;
+    }
+    h2:before {
+      height: 98px;
+      width: 100%;
+      content: " ";
+      text-shadow: none;
+      margin: -5% 0% 0% -10%;
+      position: absolute;
+      background: url("../images/layout/already-partners-yellow-line.png") no-repeat ;
+    }
+    p {
+      margin: 0 16% 7% 15%;
+      text-align: left;
+      font: 24px "BentonSans",sans-serif;
+
+    }
+
+  }
+
+  .already-partner .program-join {
+    h2{
+      font-size: 30px;
+    }
+  }
+}
