@@ -21,12 +21,53 @@
     <script src="js/respond.js"/></script>
     <![endif]-->
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('#bxslider').bxSlider({
+
+//        $(function(){
+
+//            checkWidth();
+
+//            $(window).on('resize', function(){
+//                checkWidth();
+//            });
+//        });
+//        var slider = $('#bxslider').bxSlider();
+//
+        function checkWidth(){
+            $(".width").text($(window).width());
+//
+            if ($(window).width() < 800) {
+                $('#bxslider').bxSlider({
                 mode: 'fade',
                 captions: false
             });
+            } else {
+                $('#bxslider').destroySlider();
+            }
+        }
+
+        $(window).on("orientationchange load resize", function () {
+            checkWidth();
         });
+
+
+            /*JOB*/
+//var slider = $('.bxslider').bxSlider();
+//var sld = function() {
+//    if ($(window).width() < 800) {
+//        $('#bxslider').bxSlider({
+//            auto: true,
+//            pause: 2000,
+//            autoHover: true
+//        });
+//    } else {
+//        $('#bxslider').destroySlider();
+//    }
+//};
+//sld();
+//$(window).on("orientationchange load resize", function () {
+//            sld();
+//        });
+
 
         $(document).ready(function () {
             $('#bxslider2').bxSlider({
@@ -151,11 +192,16 @@
 
                 <p>Name name</p>
             </div>
+            <!---->
+            <!--Window width - <span class="width"></span><br />-->
+            <!---->
         </div>
     </div>
 
 <div class="benefits-slider">
+    <div class="wrapper-desc">
     <ul id="bxslider">
+    <!--<ul class="bxslider">-->
         <li>
             <img src="images/layout/benefit-pic1.png" title="Portfolio" alt="slider"/>
 
@@ -191,6 +237,7 @@
         </li>
     </ul>
 
+    </div>
 </div>
 
 <div class="programs">
