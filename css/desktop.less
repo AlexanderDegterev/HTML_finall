@@ -1,0 +1,734 @@
+@media screen and (min-width: 800px) {
+  /* Layout
+  ----------------------------------*/
+
+  .wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  .header {
+    background-color: #ffffff;
+  }
+
+  .wrapper-desc {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .site-top {
+    height: 59px;
+
+    .navbar-brand {
+      display: inline-block;
+      float: left;
+      height: 39px;
+      width: 45%;
+      padding: 10px 0px 0px 30px;
+      color: #fff;
+      text-shadow: none;
+      box-sizing: border-box;
+
+      img {
+        float: left;
+      }
+
+      span {
+        display: block;
+        float: left;
+        color: #000;
+        font: 0.8em 'BentonSans-Bold', sans-serif;
+        padding: 1% 0 0 6%;
+        position: absolute;
+        text-decoration: none;
+      }
+    }
+
+    .navbar-contact {
+      display: inline-block;
+      float:right;
+      width: 26%;
+      color: #000;
+      margin: 1% 1% 0% 0%;
+      text-align: right;
+      font: 0.8em 'BentonSans-Bold', sans-serif;
+      p:first-child {
+        display: none;
+      }
+    }
+
+    .navbar-search {
+      display: none;
+      float:right;
+      margin-right: 50px;
+
+      form {
+        overflow: hidden;
+      }
+
+      input {
+        float: left;
+      }
+
+      input[type="submit"] {
+        margin: 14px 10px 0 10px;
+        width: 34px;
+        height: 34px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: url("../images/layout/search.png") no-repeat;
+      }
+
+      input[type="text"] {
+        display: none;
+        margin: 17px auto;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .search {
+    float: right;
+    width: 20%;/*402px;*/
+    height: 26px;
+    margin-top: 1%;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .search form {
+    overflow: hidden;
+  }
+
+  .search input {
+    float: left;
+  }
+
+  .search input[type="text"]{
+    width: 57%;
+    height: 20px;
+    margin-top: 5px;
+    padding: 0 24px 0 1px;
+    color: #000000;
+    background: #d6d6d6;
+    font-size: 13px;
+    border: solid 0px #4E4848;
+    border-radius: 5px;
+    border-right: none;
+    text-indent: 1.5em;
+  }
+
+  .search input[type="text"]:hover {
+    -moz-box-shadow:0 0 2px #555;
+    -webkit-box-shadow:0 0 2px #555;
+    box-shadow:0 0 2px #555;
+  }
+  /**/
+  .search input:focus::-moz-placeholder {
+    color: transparent;
+  }
+  .search input:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  .search input[type="submit"]{
+    margin: 7px 0px 0px -20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: url("../images/layout/search_desktop.png") no-repeat 4px 3px;
+  }
+
+//  .site-top.navbar-search {
+//    display: inline-block;
+//    float:right;
+//    margin-right: 50px;
+//  }
+  /*------------------------------------*\
+      NAVIGATION
+  \*------------------------------------*/
+  .button_mobile_menu {
+    position: absolute;
+    display: none;
+    float: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 14px 10px 0 10px;
+    right: 0%;
+    top:0px;
+    height: 50px;
+    width: 34px;
+    background: url("../images/layout/button_menu_mobile.png") no-repeat;
+    text-align: center;
+    text-overflow: ellipsis;
+    font: normal 13px Helvetica Neue, sans-serif;
+    line-height: 36px;
+    cursor: pointer;
+  }
+  .button_mobile_menu::-moz-selection {
+    background: none;
+  }
+  .menu-mobile {
+    list-style: outside none none;
+    overflow: auto;
+    padding: 0;
+    li {
+      //      background-color: #ffffff;
+      background: url("../images/layout/mobile-menu-background.png") repeat-x;
+      padding: 10px 0;
+      a {
+        font: bold 1.5em/21px 'BentonSans', sans-serif;
+        color: #000000;
+        padding-left: 15px;
+      }
+    }
+    li:hover {
+      text-decoration:none;
+      color: #ffffff;
+      background: none;
+      background-color: #f1ac12;
+      a {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .menu-mobile ::selection {
+    background: none;
+  }
+  .menu-mobile ::-moz-selection {
+    background: none;
+  }
+
+  .menu-mobile, #go {
+    display:none;
+    height: 214px;
+  }
+  .st {
+    padding:0 20px 0 20px;
+    background:green;
+    cursor:pointer;
+    color:white;
+  }
+  #go:checked  ~ .menu-mobile {
+    display:block;
+    transition: height 0.5s;
+    -o-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+  }
+  /*End menu new*/
+
+  /*------------------------------------*\
+	NAVIGATION
+\*------------------------------------*/
+  #nav{
+    background-color: white;
+    border-radius: 5px;
+    display: block;
+    float: left;
+    list-style: outside none none;
+    margin: 2% 0 -10% 3%;
+    text-align: center;
+    width: 91%;
+    -moz-box-shadow:1px 2px 2px #555;
+    -webkit-box-shadow:1px 2px 2px #555;
+    box-shadow:1px 2px 2px #555;
+  }
+  #nav li{
+    float:right;
+    font: 400 0.8em/21px Helvetica Neue, sans-serif;
+    width: 20%;
+//    padding: 5px 5px 0px 2px;
+    position:relative;
+    display:block;
+  }
+  #nav li a{
+    text-decoration: none;
+    padding: 17px 24px 17px 0;
+    color: #000000;
+    font: 1.2em 'BentonSans-Bold', sans-serif;
+    /*background-color: #2f2f2f;*/
+    display:block;
+
+//    text-shadow:1px 1px 1px #87509c; /* Тень текста, чтобы приподнять его на немного */
+//    -moz-border-radius:2px;
+//    -webkit-border-radius:2px;
+//    border-radius:2px;
+  }
+  #nav li a:hover{
+    color:#fff;
+    background-color: #f1ac12;
+//    border-radius: 5px 5px 0px 5px;
+//    background:rgba(241,72,18,0.75);  /*ыглядит полупрозрачным*/
+    text-decoration:none;
+    /*transform: scale(1.5);*/
+  }
+
+  /*--- ВЫПАДАЮЩИЕ ПУНКТЫ ---*/
+  #nav ul{
+    list-style:none;
+    position:absolute;
+    left:-9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+    opacity:0; /* Устанавливаем начальное состояние прозрачности */
+    -webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+  }
+  #nav ul li{
+    padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+    float:none;
+    width: 100%;
+    min-width: 202px;
+  }
+  #nav ul a{
+    white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+    display:block;
+  }
+  #nav li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+    left:0; /* Приносим его обратно на экран, когда нужно */
+    opacity:1; /* Делаем непрозрачным */
+    font: 400 1.25em/21px Helvetica Neue, sans-serif;
+    z-index: 5000;
+  }
+  #nav li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+    background:#f1ac12;
+//    background:rgba(241,72,18,0.75);  /*Выглядит полупрозрачным*/
+    text-decoration:none;
+//    border-radius: 5px;
+  }
+  #nav li:hover ul a{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+    text-decoration:none;
+    -webkit-transition:-webkit-transform 0.075s linear;
+  }
+  #nav li:hover ul li a:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
+    background: #da1eec;
+    background:rgba(51,51,51,0.75);  /*Будет полупрозрачным*/
+    text-decoration:none;
+    border-radius: 5px;
+//    -moz-transform:scale(1.05);
+//    -webkit-transform:scale(1.05);
+  }
+
+  /*HOME*/
+  .home-slide {
+    padding-top: 0px;
+    display: block;
+    height: 480px;
+    width: 100%;
+    background: url("../images/layout/Home_top.jpg") no-repeat center;
+    h3 {
+      margin-bottom: 15px;
+      padding: 109px 29px 0px;
+      max-width: 500px;
+      font: 400 18px 'BentonSans-Medium', sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .headering {
+      display: inline-block;
+      text-decoration: none;
+      height: 72px;
+      max-width: 300px;
+      padding: 0px 50px 0px 15px;
+      margin-bottom: 3px;
+      margin-left: 30px;
+      background-color: #000000;
+      color: white;
+      text-align: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font: normal 34px 'BentonSans' , sans-serif;
+      line-height: 60px;
+    }
+  }
+
+  .home-top-content {
+    overflow: hidden;
+    margin-left: 30px;
+    width: 30%;
+    height: 145px;
+    background: url("../images/layout/home-top-content.png") repeat;
+    h3 {
+      margin: 4% 0 0 8%;
+      padding: 0;
+      font: 400 1.25em 'BentonSans-Medium', sans-serif;
+    }
+    h3:before {
+      height: 22px;
+      width: 100%;
+      content: " ";
+      text-shadow: none;
+      margin: -13px -27px;
+      position: absolute;
+      background: url("../images/layout/triangle-home-top-content.png") no-repeat;
+    }
+    p {
+      margin: 4% 0 0 8%;
+      font: normal 0.8em 'BentonSans', sans-serif;
+    }
+  }
+  .home-content {
+    display: inline-block;
+    width: 100%;
+    font: normal 24px 'BentonSans' , sans-serif;
+    h2 {
+      margin: 8% 0 0 6%;
+      font: 0.8em 'BentonSans-Bold' , sans-serif;
+    }
+    p {
+      margin: 3% 0 0 6%;
+      font: 0.6em 'BentonSans-Medium' , sans-serif;
+    }
+  }
+  .home-content-content {
+    display: inline-block;
+    width: 50%;
+    min-height: 200px;
+    overflow: hidden;
+  }
+  .home-content-signature {
+    display: inline-block;
+    min-height: 200px;
+    width: 49%;
+    overflow: hidden;
+
+    p:first-child {
+      padding-top: 10%;
+      font: italic 0.9em 'BentonSans-Medium' , sans-serif;
+    }
+    p:first-child:before {
+        height: 29px;
+        width: 48px;
+        content: " ";
+        text-shadow: none;
+        margin: -12px -26px;
+        position: absolute;
+        background: url("../images/layout/kov_1_desktop.png") no-repeat ;
+    }
+    p:first-child:after{
+      height: 29px;
+      width: 48px;
+      content: " ";
+      text-shadow: none;
+//      margin: 63px 200px;
+      position: absolute;
+      background: url("../images/layout/kov_2_desktop.png") no-repeat ;
+    }
+    p {
+      margin: 3% 10% 1% 20%;
+      font: 0.6em 'BentonSans-Medium' , sans-serif;
+      letter-spacing: 0px;
+      color: #494949;
+    }
+  }
+  .benefits-slider {
+    margin: 0 auto;
+    height: 750px;
+  }
+
+
+  /*END HOME*/
+  .programs {
+    //    height: 1577px;
+    background: url("../images/layout/program.jpg") no-repeat center;
+    text-align: center;
+  }
+
+  .program {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: left;
+    //    width: 580px;
+    //    height: 680px;
+    margin: 11% 4% 0% 4%;
+    background-color: #ffffff;
+  }
+
+  .program-header {
+    overflow: hidden;
+    //    height: 330px;
+  }
+
+  .program-wrapper {
+    margin: 0% 6%;
+
+  }
+
+  .program-header {
+    h2 {
+      margin: 6% 0% 10% 0%;
+      color: #000000;
+      font: 900 36px "BentonSans-Bold",sans-serif;
+      span {
+        font: 400 36px "BentonSans",sans-serif;
+        margin-left: 3% ;
+      }
+    }
+    h1 {
+      margin: 0 0% 3% 0%;
+      color: #f0ab00;
+      font: 900 53px "BentonSans-Bold",sans-serif;
+      span {
+        font: 400 53px "BentonSans",sans-serif;
+        margin-left: 3% ;
+      }
+    }
+    p {
+      font: 400 27px "BentonSans",sans-serif;
+      margin: 0 0 4%;
+    }
+  }
+
+  .program-content {
+    background-color: #000000;
+    overflow: hidden;
+    //    height: 250px;
+    h1 {
+      margin: 0 0% 3% 0%;
+      padding-top: 7%;
+      color: #f0ab00;
+      font: 900 53px "BentonSans-Bold",sans-serif;
+      span {
+        font: 400 53px "BentonSans",sans-serif;
+        margin-left: 3% ;
+      }
+    }
+    p {
+      font: 400 27px "BentonSans",sans-serif;
+      color: #ffffff;
+      margin: 0 0 4%;
+    }
+  }
+
+  .program-join {
+    background-color: #00a1e4;
+    height: 100px;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    h2 {
+      font: 400 38px "BentonSans-Bold",sans-serif;
+      padding-top: 2%;
+      span {
+        font: 900 52px "SD_Helveticons",sans-serif;
+        margin-left: 3%;
+      }
+    }
+
+  }
+
+  .partners {
+    overflow: hidden;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    //    height: 975px;
+  }
+
+  .partner-header {
+    h1 {
+      font: 400 50px "BentonSans",sans-serif;
+      margin: 5% 10% 10% 10%;
+      //      margin-bottom: 10%;
+      //      margin-top: 5%;
+    }
+  }
+
+  .partner-slider {
+    height: 694px;
+    //    width: 674px;
+    background: url("../images/layout/fon_partners_slider.jpg") no-repeat center;
+    text-align: center;
+  }
+
+  .partner-slider-wrapper {
+    //    height: 566px;
+    margin: 0 auto;
+    //    overflow: hidden;
+    padding-top: 72px;
+    position: relative;
+    text-align: left;
+    width: 480px;
+  }
+
+  .partner-footer {
+    height: 500px;
+    width: 100%;
+    background-color: beige;
+  }
+
+  /*menu test*/
+  nav[role="navigation"] {
+    width: 165px;
+    //    background: #34495e;
+    height: 100px;
+    display: inline-block;
+    margin: 7% 0 -6% 14%;
+    font-family: 'bentonsans-bold', sans-serif;
+  }
+
+  nav[role="navigation"] a {
+    font-size: 25px;
+    color: #00a1e4;
+    text-decoration: none;
+    padding: 0 15px;
+    line-height: 35px;
+  }
+  nav[role="navigation"] li {width: 100%; height: auto; text-align: center; background: #bdc3c7; border: 1px solid #fff;padding: 10px 0;}
+  //  nav[role="navigation"] span {font-size: 35px;}
+
+  .toggle span {
+    font: 400 25px "sd_helveticons",sans-serif;
+    //    margin: 5% 10% 10% 10%;
+
+  }
+  .menu {display: none;}
+  /*end menu test*/
+
+  .icon_quote {
+    position: absolute;
+    margin: 6% 2% 0% 24%;
+    display: inline-block;
+    height: 54px;
+    width: 54px;
+    background: url("../images/layout/icon_quote.png") no-repeat center;;
+  }
+
+  .icon_video {
+    position: absolute;
+    margin: 5% 2% 0% 38%;
+    display: inline-block;
+    height: 54px;
+    width: 54px;
+    background: url("../images/layout/icon_video.png") no-repeat center;;
+  }
+
+  .already-partner {
+    //    display: inline-block;
+    text-align: center;
+    //    background-color: red;
+    //    height: 100px;
+  }
+
+  .already-partner .header {
+    margin: 10% 0% 3% 0%;
+    h2 {
+      margin: 0% 10% 8% 10%;
+      color: #000000;
+      //      text-align: center;
+      font: 900 36px "BentonSans-Bold",sans-serif;
+    }
+    h2:before {
+      height: 98px;
+      width: 100%;
+      content: " ";
+      text-shadow: none;
+      margin: -5% 0% 0% -10%;
+      position: absolute;
+      background: url("../images/layout/already-partners-yellow-line.png") no-repeat ;
+    }
+    p {
+      margin: 0 16% 7% 15%;
+      text-align: left;
+      font: 24px "BentonSans",sans-serif;
+
+    }
+
+  }
+
+  .already-partner .program-join {
+    h2{
+      font-size: 30px;
+    }
+  }
+
+  .contact-bar {
+    width: 100%;
+    display: inline-block;
+    margin: 5% 0% 5% 10%;
+    text-align: center;
+    font: 400 18px "BentonSans-Bold",sans-serif;
+  }
+
+  .phone {
+    float: left;
+    width: 50%;
+  }
+  .phone:before {
+    height: 55px;
+    width: 100%;
+    content: " ";
+    text-shadow: none;
+    margin: -2% 0 0 -25%;
+    position: absolute;
+    background: url("../images/layout/icon_phone.png") no-repeat ;
+  }
+  .email {
+    display: inline-block;
+    width: 50%;
+  }
+  .email:before {
+    height: 55px;
+    width: 100%;
+    content: " ";
+    text-shadow: none;
+    margin: -2% 0 0 -25%;
+    position: absolute;
+    background: url("../images/layout/icon_email.png") no-repeat ;
+  }
+
+  .footer {
+    background: #000000;
+    width: 100%;
+  }
+
+  .logo {
+    background: #000000;
+    padding: 4% 0 2% 6%;
+    a {
+      font: 400 22px "BentonSans",sans-serif;
+      text-decoration: underline;
+      color: #00a1e4;
+    }
+    a:hover {
+      //      opacity: 0.7;
+      color: #006893;
+    }
+  }
+
+  .logo_link {
+    margin: 3% 0% 3% 0%;
+  }
+
+  .nav-footer {
+    background-color: black;
+    text-align: center;
+    float: right;
+    width: 100%;
+  }
+
+  .nav-footer li {
+    display: inline-block;
+    padding: 5px 5px 4% 10px;;
+    font: 19px 'bentonsans-medium', sans-serif;
+    background: url(../images/layout/vertival-line-footer-nav.png) no-repeat left 26%;
+  }
+
+  .nav-footer li:first-child {
+    background: none;
+  }
+
+  .nav-footer a {
+    text-decoration: none;
+    padding: 2px 1px;
+    color: #ffffff;
+  }
+
+  .nav-footer a:hover {
+    border-radius: 5px 5px 5px 5px;
+    background-color: #568cbc;
+  }
+}

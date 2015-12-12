@@ -1,4 +1,10 @@
 @media screen and (max-width: 800px) {
+  #nav {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
 
   /* Layout
   ----------------------------------*/
@@ -31,7 +37,7 @@
         display: none;
         float: left;
         color: #000;
-        padding-top: 2%;
+        padding-top: 4%;
         text-decoration: none;
       }
     }
@@ -42,6 +48,12 @@
       color: #000;
       margin: 19px 10px 0 10px;
       font: 19px 'BentonSans-Bold', sans-serif;
+      p:last-child {
+        display: none;
+      }
+      span {
+        display: none;
+      }
     }
 
     .navbar-search {
@@ -204,6 +216,9 @@
       margin: -172px -193px;
       position: absolute;
       background: url("../images/layout/triangle-home-top-content.png") no-repeat ;
+    }
+    h3 {
+      display: none;
     }
     p {
       margin: 27px;
