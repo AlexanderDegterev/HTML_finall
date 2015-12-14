@@ -23,7 +23,7 @@
       display: inline-block;
       float: left;
       height: 39px;
-      width: 50%;
+      width: 20%;
       padding: 10px 0px 0px 30px;
       color: #fff;
       text-shadow: none;
@@ -35,10 +35,6 @@
 
       span {
         display: none;
-        float: left;
-        color: #000;
-        padding-top: 4%;
-        text-decoration: none;
       }
     }
 
@@ -352,15 +348,16 @@
   }
 
   .program-join {
-    background-color: #00a1e4;
-    color: #ffffff;
-    height: 110px;
-    line-height: 110px;
-    text-align: center;
+    display: block;
     a {
+      display: block;
+      background-color: #00a1e4;
+      color: #ffffff;
+      height: 110px;
+      line-height: 110px;
+      text-align: center;
       font: 400 2.7em "BentonSans-Bold",sans-serif;
       padding-top: 0%;
-      color: #ffffff;
       &:hover {
         color: #000000;
       }
@@ -471,41 +468,39 @@
   }
 
   .already-partner {
-//    display: inline-block;
     text-align: center;
-//    background-color: red;
-//    height: 100px;
+    .header {
+      margin: 10% 0% 3% 0%;
+      h2 {
+        margin: 0% 10% 8% 10%;
+        color: #000000;
+        font: 900 36px "BentonSans-Bold", sans-serif;
+      }
+      h2:before {
+        height: 98px;
+        width: 100%;
+        content: " ";
+        text-shadow: none;
+        margin: -5% 0% 0% -10%;
+        position: absolute;
+        background: url("../images/layout/already-partners-yellow-line.png") no-repeat;
+      }
+      p {
+        margin: 0 16% 7% 15%;
+        text-align: left;
+        font: 24px "BentonSans", sans-serif;
+      }
+    }
+    .content {
+      display: none;
+    }
   }
 
-  .already-partner .header {
-    margin: 10% 0% 3% 0%;
-    h2 {
-      margin: 0% 10% 8% 10%;
-      color: #000000;
-//      text-align: center;
-      font: 900 36px "BentonSans-Bold",sans-serif;
-    }
-    h2:before {
-      height: 98px;
-      width: 100%;
-      content: " ";
-      text-shadow: none;
-      margin: -5% 0% 0% -10%;
-      position: absolute;
-      background: url("../images/layout/already-partners-yellow-line.png") no-repeat ;
-    }
-    p {
-      margin: 0 16% 7% 15%;
-      text-align: left;
-      font: 24px "BentonSans",sans-serif;
-
-    }
-
-  }
 
   .already-partner .program-join {
     a{
       font-size: 30px;
+      line-height: 110px;
     }
   }
 
@@ -514,35 +509,44 @@
     display: inline-block;
     margin: 5% 0% 5% 10%;
     text-align: center;
-    font: 400 18px "BentonSans-Bold",sans-serif;
+    font: 400 18px "BentonSans-Bold", sans-serif;
+    .phone {
+      float: left;
+      width: 50%;
+      p {
+        display: none;
+      }
+    }
+    .phone:before {
+      height: 55px;
+      width: 100%;
+      content: " ";
+      text-shadow: none;
+      margin: -2% 0 0 -25%;
+      position: absolute;
+      background: url("../images/layout/icon_phone.png") no-repeat;
+    }
+    .email {
+      display: inline-block;
+      width: 50%;
+    }
+    .email:before {
+      height: 55px;
+      width: 100%;
+      content: " ";
+      text-shadow: none;
+      margin: -2% 0 0 -25%;
+      position: absolute;
+      background: url("../images/layout/icon_email.png") no-repeat;
+    }
+    .ask-sap {
+      display: none
+    }
+    .ask-expert {
+      display: none
+    }
   }
 
-  .phone {
-    float: left;
-    width: 50%;
-  }
-  .phone:before {
-    height: 55px;
-    width: 100%;
-    content: " ";
-    text-shadow: none;
-    margin: -2% 0 0 -25%;
-    position: absolute;
-    background: url("../images/layout/icon_phone.png") no-repeat ;
-  }
-  .email {
-    display: inline-block;
-    width: 50%;
-  }
-  .email:before {
-    height: 55px;
-    width: 100%;
-    content: " ";
-    text-shadow: none;
-    margin: -2% 0 0 -25%;
-    position: absolute;
-    background: url("../images/layout/icon_email.png") no-repeat ;
-  }
 
   .footer {
     background: #000000;

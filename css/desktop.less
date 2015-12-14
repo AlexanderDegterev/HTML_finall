@@ -11,7 +11,7 @@
   }
 
   .wrapper-desc {
-    width: 70%;
+    width: 978px;/*66%;*/
     margin: 0 auto;
   }
 
@@ -372,10 +372,10 @@
   .home-content {
     display: inline-block;
     width: 100%;
-    margin-bottom: 1%;
+    margin-bottom: 0%;
     font: normal 24px 'BentonSans' , sans-serif;
     h2 {
-      margin: 8% 0 0 6%;
+      margin: 6% 0 0 6%;
       font: 0.8em 'BentonSans-Bold' , sans-serif;
     }
     p {
@@ -396,7 +396,7 @@
     overflow: hidden;
 
     p:first-child {
-      padding-top: 10%;
+      padding-top: 7%;
       font: italic 0.9em 'BentonSans-Medium' , sans-serif;
     }
     p:first-child:before {
@@ -418,14 +418,14 @@
       background: url("../images/layout/kov_2_desktop.png") no-repeat ;
     }
     p {
-      margin: 3% 10% 1% 20%;
+      margin: 3% 10% 1% 15%;
       font: 0.6em 'BentonSans-Medium' , sans-serif;
       letter-spacing: 0px;
       color: #494949;
     }
   }
   .benefits-slider {
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 //    height: 750px;
   }
 
@@ -472,7 +472,7 @@
 //    overflow: hidden;
     display: inline-block;
     text-align: left;
-    width: 28%;
+    width: 24%;
     margin: 3% 2% 0;
     background-color: #ffffff;
   }
@@ -501,7 +501,7 @@
     h1 {
       margin: 0 0% 3% 0%;
       color: #f0ab00;
-      font: 900 1.9em "BentonSans-Bold",sans-serif;
+      font: 900 1.5em "BentonSans-Bold",sans-serif;
       span {
         font: 400 1.0em "BentonSans",sans-serif;
         margin-left: 3% ;
@@ -509,7 +509,7 @@
     }
     p {
       font: 400 1.0em "BentonSans",sans-serif;
-      margin: 0 0 4%;
+      margin: 0 12% 4% 4%;
     }
   }
 
@@ -519,9 +519,9 @@
     //    height: 250px;
     h1 {
       margin: 0 0% 3% 0%;
-      padding-top: 7%;
+      padding-top: 5%;
       color: #f0ab00;
-      font: 900 1.9em "BentonSans-Bold",sans-serif;
+      font: 900 1.5em "BentonSans-Bold",sans-serif;
       span {
         font: 400 1.1em "BentonSans",sans-serif;
         margin-left: 3% ;
@@ -530,11 +530,12 @@
     p {
       font: 400 1.0em "BentonSans",sans-serif;
       color: #ffffff;
-      margin: 0 0 7%;
+      margin: 0 12% 4% 4%;
     }
   }
 
-  .program-join {
+  .programs .program-join {
+    display: block;
 //    background-color: #00a1e4;
 //    color: #ffffff;
 //    height: 50px;
@@ -547,15 +548,15 @@
 //    border-radius: 5px;
     a {
       font: 400 1.0em/2em "BentonSans-Bold",sans-serif;
-      padding-top: 2%;
+//      padding-top: 2%;
       color: #ffffff;
       background-color: #00a1e4;
       color: #ffffff;
-      height: 50px;
+      height: 45px;
       left: 43%;
       position: absolute;
       text-align: center;
-      top: 96%;
+      top: 97%;
       vertical-align: middle;
       width: 62%;
       border-radius: 5px;
@@ -575,13 +576,14 @@
     display: inline-block;
     text-align: left;
     width: 100%;
+    margin-bottom: 60px;
     //    height: 975px;
   }
 
   .partner-header {
     h1 {
       font: 400 2.2em "BentonSans",sans-serif;
-      margin: 5% 14% 1% 14%;
+      margin: 5% 1% 3%;
       //      margin-bottom: 10%;
       //      margin-top: 5%;
     }
@@ -590,54 +592,45 @@
     min-height: 850px;
     position: relative;
     text-align: left;
-//    clear: both;
-//    margin: 15px 0px 91px 0px;
+    .tab {
+      display: inline-block;
+      margin-top: 1%;
+      left: 523px;
+    label {
+      background: #ffffff;
+      padding: 14px 27px 14px 27px;
+      font: 400 1.0em "BentonSans-Medium",sans-serif;
+  //    border: 1px solid #ccc;
+  //    border-radius: 7px 7px 7px 7px;
+      margin-left: 9px;
+      position: relative;
+      cursor: pointer;
+    }
+    [type=radio] {
+      display: none;
+    }
+      [type=radio]:checked ~ label {
+        background: #f0ab00;
+        color: #ffffff;
+        font: 400 1.0em "BentonSans-Medium",sans-serif;
+        //    border-bottom: 1px solid white;
+        z-index: 2;
+      }
+
+      [type=radio]:checked ~ label ~ .content {
+        z-index: 1;
+      }
+    .content {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      padding: 20px 155px 0px 155px;
+      width: 1130px;
+      height: 880px;
+      background: #f1f1f1;
+    }
+    }
   }
-
-  .tab {
-    display: inline-block;
-    margin-top: 1%;
-    left: 523px;
-  }
-
-  .tab label {
-    background: #ffffff;
-    padding: 14px 27px 14px 27px;
-    font: 400 1.0em "BentonSans-Medium",sans-serif;
-//    border: 1px solid #ccc;
-//    border-radius: 7px 7px 7px 7px;
-    margin-left: 9px;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .tab [type=radio] {
-    display: none;
-  }
-
-  .content {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    padding: 20px 155px 0px 155px;
-    width: 1130px;
-    height: 880px;
-    background: #ffdd99;
-  }
-
-  [type=radio]:checked ~ label {
-    background: #f0ab00;
-    color: #ffffff;
-    font: 400 1.0em "BentonSans-Medium",sans-serif;
-//    border-bottom: 1px solid white;
-    z-index: 2;
-  }
-
-  [type=radio]:checked ~ label ~ .content {
-    z-index: 1;
-  }
-
-
 
   .partner-slider {
     display: none;
@@ -720,26 +713,29 @@
   }
 
   .already-partner {
-    //    display: inline-block;
-    text-align: center;
-    //    background-color: red;
-    //    height: 100px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 3%;
   }
 
   .already-partner .header {
-    margin: 10% 0% 3% 0%;
+    display: inline-block;
+    float: left;
+    width: 26%;
+//    margin-left: -9%;
+//    margin: 10% 0% 3% 0%;
     h2 {
-      margin: 0% 10% 8% 10%;
+      margin: 0% 0% 5% 13%;
       color: #000000;
-      //      text-align: center;
-      font: 900 36px "BentonSans-Bold",sans-serif;
+      text-align: left;
+      font: 900 1.9em "BentonSans-Bold",sans-serif;
     }
     h2:before {
       height: 98px;
       width: 100%;
       content: " ";
       text-shadow: none;
-      margin: -5% 0% 0% -10%;
+      margin: -1% 0% 0% -3%;
       position: absolute;
       background: url("../images/layout/already-partners-yellow-line.png") no-repeat ;
     }
@@ -753,66 +749,158 @@
   }
 
   .already-partner .program-join {
-    h2{
+    display: inline-block;
+    float: right;
+    margin: 0 1%;
+    position: relative;
+    width: 30%;
+    h2 {
       font-size: 30px;
     }
+    a {
+      background-color: #00a1e4;
+      border-radius: 5px;
+      color: #ffffff;
+      display: block;
+      font: 400 1em/3em "BentonSans-Bold",sans-serif;
+//      height: 50px;
+//      left: 2%;
+//      padding-top: 2%;
+      position: relative;
+      text-align: center;
+//      top: -42%;
+      vertical-align: middle;
+      width: 100%;
+      &:hover {
+        color: #000000;
+      }
+      span {
+        font: 900 1.8em "SD_Helveticons", sans-serif;
+        margin-left: 3%;
+      }
+    }
+  }
+
+  .already-partner .content {
+    display: inline-block;
+    float: left;
+    margin: 0 2%;
+    text-align: left;
+    width: 30%;
   }
 
   .contact-bar {
     width: 100%;
     display: inline-block;
-    margin: 5% 0% 5% 10%;
-    text-align: center;
-    font: 400 18px "BentonSans-Bold",sans-serif;
+    font: 400 18px "BentonSans-Bold", sans-serif;
     h3 {
-      font: 400 18px "BentonSans-Bold",sans-serif;
+      font: 400 18px "BentonSans-Bold", sans-serif;
     }
-  }
+    @width-block: 33%;
+    .phone {
+      display: inline-block;
+      float: left;
+      height: 100px;
+      width: @width-block;
+      border-top: 1px solid  #cccccc;
+      border-right: 1px solid  #cccccc;
+      h3 {
+        margin: 6% 0% 0% 30%;
+      }
+      p {
+        margin: 0% 0% 0% 30%;
+        font: 400 0.9em "BentonSans", sans-serif;
+      }
+    }
+    .phone:before {
+      height: 55px;
+      width: 55px;
+      content: " ";
+      text-shadow: none;
+      margin: 1% 2%;
+      position: absolute;
+      background: url("../images/layout/icon_phone.png") no-repeat;
+    }
+    .email {
+      display: none;
+      width: 30%;
+    }
+    .email:before {
+      height: 55px;
+      width: 70px;
+      content: " ";
+      text-shadow: none;
+      margin: -2% 0 0 -25%;
+      position: absolute;
+      background: url("../images/layout/icon_email.png") no-repeat;
+    }
 
-  .phone {
-    float: left;
-    width: 50%;
-  }
-  .phone:before {
-    height: 55px;
-    width: 55px;
-//    width: 100%;
-    content: " ";
-    text-shadow: none;
-    margin: -2% 0 0 -25%;
-    position: absolute;
-    background: url("../images/layout/icon_phone.png") no-repeat ;
-  }
-  .email {
-    display: inline-block;
-    width: 50%;
-  }
-  .email:before {
-    height: 55px;
-    width: 55px;
-//    width: 100%;
-    content: " ";
-    text-shadow: none;
-    margin: -2% 0 0 -25%;
-    position: absolute;
-    background: url("../images/layout/icon_email.png") no-repeat ;
+    .ask-sap {
+      float: left;
+      display: inline-block;
+      height: 100px;
+      width: @width-block;
+      border-top: 1px solid  #cccccc;
+      border-right: 1px solid  #cccccc;
+      h3 {
+        margin: 6% 0% 0% 30%;
+      }
+      p {
+        margin: 0% 0% 0% 30%;
+        font: 400 0.9em "BentonSans", sans-serif;
+      }
+    }
+    .ask-sap:before {
+      height: 55px;
+      width: 70px;
+      content: " ";
+      text-shadow: none;
+      margin: 1% 1%;
+      position: absolute;
+      background: url("../images/layout/icon_email.png") no-repeat;
+    }
+
+    .ask-expert {
+      float: right;
+      display: inline-block;
+      height: 100px;
+      width: @width-block;
+      border-top: 1px solid  #cccccc;
+      h3 {
+        margin: 6% 0% 0% 30%;
+      }
+      p {
+        margin: 0% 0% 0% 30%;
+        font: 400 0.9em "BentonSans", sans-serif;
+      }
+    }
+    .ask-expert:before {
+      height: 55px;
+      width: 70px;
+      content: " ";
+      text-shadow: none;
+      margin: 1% 2%;
+      position: absolute;
+      background: url("../images/layout/icon_ask_expert.png") no-repeat;
+    }
   }
 
   .footer {
     background: #000000;
     width: 100%;
+    height: 80px;
   }
 
   .logo {
     background: #000000;
-    padding: 4% 0 2% 6%;
     a {
-      font: 400 22px "BentonSans",sans-serif;
-      text-decoration: underline;
       color: #00a1e4;
+      font: 400 22px "BentonSans",sans-serif;
+      margin: 23px 9%;
+      position: absolute;
+      text-decoration: underline;
     }
     a:hover {
-      //      opacity: 0.7;
       color: #006893;
     }
   }
@@ -823,15 +911,17 @@
 
   .nav-footer {
     background-color: black;
+    height: 80px;
+    line-height: 80px;
+//    margin: 0 auto;
     text-align: center;
-    float: right;
     width: 100%;
   }
 
   .nav-footer li {
     display: inline-block;
-    padding: 5px 5px 4% 10px;;
-    font: 19px 'bentonsans-medium', sans-serif;
+    padding: 0px 5px 1% 10px;
+    font: 1em 'bentonsans-medium', sans-serif;
     background: url(../images/layout/vertival-line-footer-nav.png) no-repeat left 26%;
   }
 
