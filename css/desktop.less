@@ -434,19 +434,22 @@
     li{
       display: inline-block;
       overflow: hidden;
-      padding: 2% 3%;
+      padding: 2% 4%;
       text-align: center;
-      width: 27%;
+      width: 24%;
 
       img {
         margin: 0 auto;
       }
       h1{
         text-align: left;
+        font: 1.6em 'BentonSans-Bold' , sans-serif;
+        margin-bottom: 8%;
 
       }
       p{
         text-align: left;
+        font: 0.9em 'BentonSans' , sans-serif;
 
       }
       a{
@@ -460,17 +463,17 @@
   .programs {
     //    height: 1577px;
     background: url("../images/layout/program-desktop.jpg") no-repeat top center;
+    margin-bottom: 4%;
     text-align: center;
   }
 
   .program {
     position: relative;
-    overflow: hidden;
+//    overflow: hidden;
     display: inline-block;
     text-align: left;
-    //    width: 580px;
-    //    height: 680px;
-    margin: 11% 4% 0% 4%;
+    width: 28%;
+    margin: 3% 2% 0;
     background-color: #ffffff;
   }
 
@@ -488,23 +491,24 @@
     h2 {
       margin: 6% 0% 10% 0%;
       color: #000000;
-      font: 900 36px "BentonSans-Bold",sans-serif;
+      font: 900 1.9em "BentonSans-Bold",sans-serif;
       span {
-        font: 400 36px "BentonSans",sans-serif;
-        margin-left: 3% ;
+        display: block;
+        font: 400 1.1em "BentonSans",sans-serif;
+//        margin-left: 3% ;
       }
     }
     h1 {
       margin: 0 0% 3% 0%;
       color: #f0ab00;
-      font: 900 53px "BentonSans-Bold",sans-serif;
+      font: 900 1.9em "BentonSans-Bold",sans-serif;
       span {
-        font: 400 53px "BentonSans",sans-serif;
+        font: 400 1.0em "BentonSans",sans-serif;
         margin-left: 3% ;
       }
     }
     p {
-      font: 400 27px "BentonSans",sans-serif;
+      font: 400 1.0em "BentonSans",sans-serif;
       margin: 0 0 4%;
     }
   }
@@ -517,30 +521,39 @@
       margin: 0 0% 3% 0%;
       padding-top: 7%;
       color: #f0ab00;
-      font: 900 53px "BentonSans-Bold",sans-serif;
+      font: 900 1.9em "BentonSans-Bold",sans-serif;
       span {
-        font: 400 53px "BentonSans",sans-serif;
+        font: 400 1.1em "BentonSans",sans-serif;
         margin-left: 3% ;
       }
     }
     p {
-      font: 400 27px "BentonSans",sans-serif;
+      font: 400 1.0em "BentonSans",sans-serif;
       color: #ffffff;
-      margin: 0 0 4%;
+      margin: 0 0 7%;
     }
   }
 
   .program-join {
     background-color: #00a1e4;
-    height: 100px;
     color: #ffffff;
+    height: 50px;
+    left: 43%;
+    position: absolute;
     text-align: center;
+    top: 96%;
     vertical-align: middle;
-    h2 {
-      font: 400 38px "BentonSans-Bold",sans-serif;
+    width: 62%;
+    border-radius: 5px;
+    a {
+      font: 400 1.0em/3em "BentonSans-Bold",sans-serif;
       padding-top: 2%;
+      color: #ffffff;
+      &:hover {
+        color: #000000;
+      }
       span {
-        font: 900 52px "SD_Helveticons",sans-serif;
+        font: 900 1.8em "SD_Helveticons",sans-serif;
         margin-left: 3%;
       }
     }
@@ -557,17 +570,79 @@
 
   .partner-header {
     h1 {
-      font: 400 50px "BentonSans",sans-serif;
-      margin: 5% 10% 10% 10%;
+      font: 400 2.2em "BentonSans",sans-serif;
+      margin: 5% 14% 1% 14%;
       //      margin-bottom: 10%;
       //      margin-top: 5%;
     }
   }
+  .tabs {
+    min-height: 850px;
+    position: relative;
+    text-align: left;
+//    clear: both;
+//    margin: 15px 0px 91px 0px;
+  }
+
+  .tab {
+    display: inline-block;
+    margin-top: 1%;
+    left: 523px;
+  }
+
+  .tab label {
+    background: #ffffff;
+    padding: 14px 27px 14px 27px;
+    font: 400 1.0em "BentonSans-Medium",sans-serif;
+//    border: 1px solid #ccc;
+//    border-radius: 7px 7px 7px 7px;
+    margin-left: 9px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .tab [type=radio] {
+    display: none;
+  }
+
+  .content {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    padding: 20px 155px 0px 155px;
+    width: 1130px;
+    height: 880px;
+    background: #ffdd99;
+  }
+
+  [type=radio]:checked ~ label {
+    background: #f0ab00;
+    color: #ffffff;
+    font: 400 1.0em "BentonSans-Medium",sans-serif;
+//    border-bottom: 1px solid white;
+    z-index: 2;
+  }
+
+  [type=radio]:checked ~ label ~ .content {
+    z-index: 1;
+  }
+
+
 
   .partner-slider {
+    display: none;
     height: 694px;
     //    width: 674px;
+    background-color: #ffffff;
     background: url("../images/layout/fon_partners_slider.jpg") no-repeat center;
+    text-align: center;
+  }
+
+  .partner-slider-desktop {
+    display: block;
+    height: 694px;
+    //    width: 674px;
+//    background: url("../images/layout/fon_partners_slider.jpg") no-repeat center;
     text-align: center;
   }
 
@@ -576,6 +651,7 @@
     margin: 0 auto;
     //    overflow: hidden;
     padding-top: 72px;
+    background-color: white;
     position: relative;
     text-align: left;
     width: 480px;

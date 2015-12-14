@@ -353,18 +353,30 @@
 
   .program-join {
     background-color: #00a1e4;
-    height: 100px;
     color: #ffffff;
+    height: 110px;
+    line-height: 110px;
     text-align: center;
-    vertical-align: middle;
-    h2 {
-      font: 400 38px "BentonSans-Bold",sans-serif;
-      padding-top: 2%;
+    a {
+      font: 400 2.7em "BentonSans-Bold",sans-serif;
+      padding-top: 0%;
+      color: #ffffff;
+      &:hover {
+        color: #000000;
+      }
       span {
-        font: 900 52px "SD_Helveticons",sans-serif;
+        font: 900 1.8em "SD_Helveticons",sans-serif;
         margin-left: 3%;
       }
     }
+//    h2 {
+//      font: 400 38px "BentonSans-Bold",sans-serif;
+//      padding-top: 2%;
+//      span {
+//        font: 900 52px "SD_Helveticons",sans-serif;
+//        margin-left: 3%;
+//      }
+//    }
 
   }
 
@@ -383,6 +395,10 @@
 //      margin-bottom: 10%;
 //      margin-top: 5%;
     }
+  }
+
+  .tabs {
+    display: none;
   }
 
   .partner-slider {
@@ -488,7 +504,7 @@
   }
 
   .already-partner .program-join {
-    h2{
+    a{
       font-size: 30px;
     }
   }
