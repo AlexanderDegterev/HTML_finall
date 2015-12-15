@@ -41,16 +41,15 @@
 }
 
 .bx-wrapper p{
-    font: 1.75em/29px 'bentonsans',sans-serif;
-    margin: 4% 0% 0% 21%;
+    font: 1.5em/29px 'bentonsans',sans-serif;
+    margin: 4% 0% 2% 21%;
     text-align: left;
 }
 
 .benefits-link {
-    position: absolute;
     color: #008fd6;
     font: 1.5em/29px 'bentonsans-bold',sans-serif;
-    margin: 2% 0% 0% 21%;
+    margin: 5% 0% 0% 21%;
     text-decoration: none;
 }
 
@@ -167,12 +166,12 @@
 /* PAGER */
 
 .bx-wrapper .bx-pager {
-	text-align: center;
-	font-size: .85em;
-	font-family: Arial;
-	font-weight: bold;
-	color: #666;
-	/*padding-top: 20px;*/
+    color: #666;
+    float: right;
+    font-family: Arial;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-align: center;
 }
 
 .bx-wrapper .bx-pager .bx-pager-item,
