@@ -70,12 +70,25 @@
 //        });
 
 
-        $(document).ready(function () {
-            $('#bxslider2').bxSlider({
-                mode: 'fade',
-                captions: false
-            });
-        });
+$(document).ready(function () {
+    $('#bxslider2').bxSlider({
+        mode: 'fade',
+        captions: false,
+        auto: true,
+        autoControls: true,
+        controls: false
+    });
+});
+
+$(document).ready(function () {
+    $('#bxslider3').bxSlider({
+        slideWidth: 180,
+        minSlides: 3,
+        maxSlides: 5,
+        slideMargin: 50,
+        auto:true
+    });
+});
     </script>
 
     <!--<script type="text/javascript">-->
@@ -173,7 +186,7 @@
                 </li>
             </ul>
 
-            <h3>SAP HANA Cloud Partners </h3>
+            <h3>SAP HANA Cloud Partners</h3>
             <h1>Boundless</h1>
 
             <p></p>
@@ -305,8 +318,9 @@
 
 <div class="partners">
     <div class="wrapper-desc">
-    <div class="partner-header">
-        <h1>Partnering With The World’s Best</h1>
+        <div class="partner-header">
+            <h1>Partnering With The World’s Best</h1>
+        </div>
     </div>
     <!--tabs-->
     <div class="tabs">
@@ -320,9 +334,11 @@
                     <div class="partner-slider-wrapper">
                         <ul id="bxslider3">
                             <li>
-                                <img src="images/layout/logo-cisco.png" title="Cisco" alt="cisco"/>
+                                <div class="partner-slider-desktop-img">
+                                    <img src="images/layout/logo-ibm.png" title="IBM" alt="IBM"/>
+                                </div>
 
-                                <h3>Cisco</h3>
+                                <h3>IBM</h3>
 
                                 <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
@@ -339,7 +355,9 @@
                                 <a class="icon_video" href="#"></a>
                             </li>
                             <li>
+                                <div class="partner-slider-desktop-img">
                                 <img src="images/layout/logo-hp.png" title="Hp" alt="hp"/>
+                                    </div>
 
                                 <h3>Hp</h3>
 
@@ -358,9 +376,53 @@
                                 <a class="icon_video" href="#"></a>
                             </li>
                             <li>
-                                <img src="images/layout/logo-dell.png" title="Hp" alt="hp"/>
+                                <div class="partner-slider-desktop-img">
+                                <img src="images/layout/logo-dell.png" title="DELL" alt="DELL"/>
+                                    </div>
 
                                 <h3>DELL</h3>
+
+                                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
+
+                                <nav role="navigation">
+                                    <a class="toggle" href="#">more<span>w</span></a>
+                                    <ul class="menu">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Portfolio</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <a class="icon_quote" href="#"></a>
+                                <a class="icon_video" href="#"></a>
+                            </li>
+                            <li>
+                                <div class="partner-slider-desktop-img">
+                                <img src="images/layout/logo-cisco.png" title="Cisco" alt="Cisco"/>
+                                    </div>
+
+                                <h3>Cisco</h3>
+
+                                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
+
+                                <nav role="navigation">
+                                    <a class="toggle" href="#">more<span>w</span></a>
+                                    <ul class="menu">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Portfolio</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <a class="icon_quote" href="#"></a>
+                                <a class="icon_video" href="#"></a>
+                            </li>
+                            <li>
+                                <div class="partner-slider-desktop-img">
+                                <img src="images/layout/logo-sas.png" title="SAS" alt="SAS"/>
+                                    </div>
+
+                                <h3>SAS</h3>
 
                                 <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
@@ -380,8 +442,6 @@
                         </ul>
                     </div>
                 </div>
-
-
             </div>
             <!--Content -->
         </div>
@@ -433,7 +493,7 @@
             </div>
         </div>
     </div>
-    </div>
+<!--</div>-->
 </div>
 
     <!--END tabs-->

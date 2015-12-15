@@ -313,6 +313,7 @@
   .home-slide {
     padding-top: 0px;
     display: block;
+    overflow: hidden;
     height: 480px;
     width: 100%;
     background: url("../images/layout/Home_top.jpg") no-repeat center;
@@ -334,6 +335,7 @@
       line-height: 60px;
     }
     h3 {
+      display: block;
       margin-bottom: 15px;
       padding: 109px 29px 0px;
       max-width: 500px;
@@ -357,10 +359,10 @@
     }
     h3:before {
       height: 22px;
-      width: 100%;
+      width: 22px;
       content: " ";
       text-shadow: none;
-      margin: -13px -27px;
+      margin: -12px -23px;
       position: absolute;
       background: url("../images/layout/triangle-home-top-content.png") no-repeat;
     }
@@ -591,7 +593,7 @@
   .tabs {
     min-height: 850px;
     position: relative;
-    text-align: left;
+    text-align: center;
     .tab {
       display: inline-block;
       margin-top: 1%;
@@ -624,8 +626,9 @@
       position: absolute;
       top: 65px;
       left: 0;
-      padding: 20px 155px 0px 155px;
-      width: 1130px;
+//      padding: 20px 155px 0px 155px;
+      width: 100%;
+//      width: 1130px;
       height: 880px;
       background: #f1f1f1;
     }
@@ -657,7 +660,12 @@
     background-color: white;
     position: relative;
     text-align: left;
-    width: 480px;
+    width: 100% /*480px;*/
+  }
+
+  .partner-slider-desktop-img {
+    height: 150px;
+    overflow: hidden;
   }
 
   .partner-footer {
@@ -732,7 +740,7 @@
     }
     h2:before {
       height: 98px;
-      width: 100%;
+      width: 20px;
       content: " ";
       text-shadow: none;
       margin: -1% 0% 0% -3%;

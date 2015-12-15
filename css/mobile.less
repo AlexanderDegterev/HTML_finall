@@ -298,12 +298,13 @@
 
   .program-header {
     h2 {
-      margin: 6% 0% 10% 0%;
+      margin: 6% 3% 10% 0%;
       color: #000000;
       font: 900 2.2em "BentonSans-Bold",sans-serif;
       span {
+        display: block;
         font: 400 0.9em "BentonSans",sans-serif;
-        margin-left: 3% ;
+//        margin-left: 3% ;
       }
     }
     h1 {
@@ -347,10 +348,10 @@
       display: block;
       background-color: #00a1e4;
       color: #ffffff;
-      height: 110px;
-      line-height: 110px;
+      min-height: 110px;
+//      line-height: 110px;
       text-align: center;
-      font: 400 2.5em "BentonSans-Bold",sans-serif;
+      font: 400 2.0em/110px "BentonSans-Bold",sans-serif;
       padding-top: 0%;
       &:hover {
         color: #000000;
@@ -391,7 +392,7 @@
     padding-top: 72px;
     position: relative;
     text-align: left;
-    width: 480px;
+    width: 70% /*480px;*/
   }
 
   .partner-footer {
@@ -427,7 +428,7 @@
 
   .icon_quote {
     position: absolute;
-    margin: 6% 2% 0% 24%;
+    margin: 6% 2% 0% 10%;
     display: inline-block;
     height: 54px;
     width: 54px;
@@ -436,7 +437,7 @@
 
   .icon_video {
     position: absolute;
-    margin: 5% 2% 0% 38%;
+    margin: 5% 2% 0% 23%;
     display: inline-block;
     height: 54px;
     width: 54px;
@@ -476,7 +477,6 @@
   .already-partner .program-join {
     a{
       font-size: 30px;
-      line-height: 110px;
     }
   }
 
