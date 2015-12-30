@@ -83,11 +83,11 @@
     }
   }
 
-  .site-top.navbar-search {
-    display: inline-block;
-    float:right;
-    margin-right: 50px;
-  }
+//  .site-top.navbar-search {
+//    display: inline-block;
+//    float:right;
+//    margin-right: 50px;
+//  }
   /*------------------------------------*\
       NAVIGATION
   \*------------------------------------*/
@@ -117,7 +117,6 @@
     overflow: auto;
     padding: 0;
     li {
-//      background-color: #ffffff;
       background: url("../images/layout/mobile-menu-background.png") repeat-x;
       padding: 10px 0;
       a {
@@ -204,12 +203,13 @@
     width: 254px;
     height: 230px;
     background: url("../images/layout/home-top-content.png") repeat;
-    :after {
+    :before {
       height: 22px;
-      width: 100%;
+      width: 25px;
       content: " ";
       text-shadow: none;
-      margin: -172px -193px;
+      margin: -27px;
+//      margin: -172px -193px;
       position: absolute;
       background: url("../images/layout/triangle-home-top-content.png") no-repeat ;
     }
@@ -252,12 +252,13 @@
       background: url("../images/layout/kov_1.png") no-repeat ;
     }
     p:last-child:after {
+      float: right;
       height: 29px;
       width: 48px;
       content: " ";
       text-shadow: none;
-      margin: -4% 35%;
-      position: absolute;
+      margin: -7% 0;
+//      position: absolute;
       background: url("../images/layout/kov_2.png") no-repeat ;
     }
     p {
@@ -271,9 +272,10 @@
     margin: 0 auto;
     height: 750px;
   }
+
   /*END HOME*/
+
   .programs {
-//    height: 1577px;
     background: url("../images/layout/program.jpg") no-repeat center;
     text-align: center;
   }
