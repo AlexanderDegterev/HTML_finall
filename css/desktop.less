@@ -238,12 +238,15 @@
   }
   #nav li{
     float:right;
-    font: 400 0.8em/21px Helvetica Neue, sans-serif;
+    font: 400 0.8em/21px 'BentonSans-Bold', sans-serif;
     width: 20%;
     position:relative;
     display:block;
     background: url(../images/layout/vertival-line-desktop-nav.png) no-repeat left 50%;
 //    border-right: 1px solid #dfdfdf;
+  }
+  #nav li:last-child{
+    background: none;
   }
   #nav li a{
     text-decoration: none;
@@ -251,12 +254,6 @@
     color: #000000;
     font: 1.2em 'BentonSans-Bold', sans-serif;
     display:block;
-
-
-//    text-shadow:1px 1px 1px #87509c; /* Тень текста, чтобы приподнять его на немного */
-//    -moz-border-radius:2px;
-//    -webkit-border-radius:2px;
-//    border-radius:2px;
   }
   #nav li a:hover{
     color:#fff;
@@ -264,7 +261,12 @@
 //    border-radius: 5px 5px 0px 5px;
 //    background:rgba(241,72,18,0.75);  /*ыглядит полупрозрачным*/
     text-decoration:none;
-    /*transform: scale(1.5);*/
+  }
+  #nav li:last-child  a:hover {
+    border-radius: 5px 0 0 5px;
+  }
+  #nav li:first-child  a:hover {
+    border-radius: 0px 5px 5px 0px;
   }
 
   /*--- ВЫПАДАЮЩИЕ ПУНКТЫ ---*/
@@ -277,6 +279,7 @@
   }
   #nav ul li{
     padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+    background-color: #000000;
     float:none;
     width: 100%;
     min-width: 202px;
@@ -288,7 +291,7 @@
   #nav li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
     left:0; /* Приносим его обратно на экран, когда нужно */
     opacity:1; /* Делаем непрозрачным */
-    font: 400 1.25em/21px Helvetica Neue, sans-serif;
+    font: 400 1.25em/21px 'BentonSans', sans-serif;
     z-index: 5000;
   }
   #nav li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
@@ -302,10 +305,11 @@
     -webkit-transition:-webkit-transform 0.075s linear;
   }
   #nav li:hover ul li a:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
-    background: #da1eec;
-    background:rgba(51,51,51,0.75);  /*Будет полупрозрачным*/
+//    background:rgba(51,51,51,0.75);  /*Будет полупрозрачным*/
+    background-color: #ffffff;
+    color: #000000;
     text-decoration:none;
-    border-radius: 5px;
+    border-radius: 0px;
 //    -moz-transform:scale(1.05);
 //    -webkit-transform:scale(1.05);
   }
@@ -556,6 +560,7 @@
       background-color: #00a1e4;
       color: #ffffff;
       height: 45px;
+      line-height: 45px;
       left: 43%;
       position: absolute;
       text-align: center;
@@ -669,6 +674,10 @@
     overflow: hidden;
   }
 
+  .partner-slider-footer {
+    width: 100%;
+  }
+
   .partner-footer {
     height: 500px;
     width: 100%;
@@ -677,11 +686,11 @@
 
   /*menu test*/
   nav[role="navigation"] {
-    width: 165px;
+    width: 90px;
     //    background: #34495e;
     height: 100px;
     display: inline-block;
-    margin: 7% 0 -6% 14%;
+    margin: 7% 0 -6% 0%;
     font-family: 'bentonsans-bold', sans-serif;
   }
 
@@ -705,11 +714,11 @@
 
   .icon_quote {
     position: absolute;
-    margin: 6% 2% 0% 24%;
+    margin: 6% 19% 0% 19%;
     display: inline-block;
     height: 54px;
     width: 54px;
-    background: url("../images/layout/icon_quote.png") no-repeat center;;
+    background: url("../images/layout/icon_quote_desktop.png") no-repeat center;;
   }
 
   .icon_video {
@@ -718,7 +727,7 @@
     display: inline-block;
     height: 54px;
     width: 54px;
-    background: url("../images/layout/icon_video.png") no-repeat center;;
+    background: url("../images/layout/icon_video_desktop.png") no-repeat center;;
   }
 
   .already-partner {
