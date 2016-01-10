@@ -1,6 +1,9 @@
 @media screen and (min-width: 800px) {
   /* Layout
   ----------------------------------*/
+  .hidden-block {
+    display: none;
+  }
 
   .wrapper {
     width: 100%;
@@ -587,7 +590,7 @@
     display: inline-block;
     text-align: left;
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 10px; //60
     //    height: 975px;
   }
 
@@ -707,21 +710,17 @@
   nav[role="navigation"] li {width: 100%; height: auto; text-align: center; background: #bdc3c7; border: 1px solid #fff;padding: 10px 0;}
   //  nav[role="navigation"] span {font-size: 35px;}
 
-  .toggle span {
-    font: 400 25px "sd_helveticons",sans-serif;
-    //    margin: 5% 10% 10% 10%;
-
+  .toggle {
+    cursor: pointer;
+  span {
+    font: 400 25px "sd_helveticons", sans-serif;
   }
-  .menu {display: none;}
-  /*end menu test*/
+  }
 
-  .contenthp {
+
+  .menu {
     display: none;
   }
-  .contentdell {
-    display: none;
-  }
-
 
   .icon_quote {
     position: absolute;
@@ -739,6 +738,27 @@
     height: 54px;
     width: 54px;
     background: url("../images/layout/icon_video_desktop.png") no-repeat center;;
+  }
+
+  .partner-content {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .partner-content .message {
+    float: left;
+    width: 50%;
+  }
+  .partner-content .video-content {
+    float: right;
+    width: 50%;
+  }
+
+  .lightbox-template {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 60px;
   }
 
   .already-partner {

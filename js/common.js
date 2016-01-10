@@ -4,8 +4,17 @@
 
 common = (function($) {
     var o = {};
-	
-	
+
+//    $("document").ready(function () {
+//        $(".toggle").click(function () {
+//            $(".content" + $(this).attr('id')).stop().slideToggle("slow");
+////                            $(".tabs").css("min-height", "850px")
+//
+//            return false
+//        });
+//
+//    });
+
 	// Final version
 	o.showTopNavigation = function(){
 		var $wrapper = $('.hidden-block-wrapper');
