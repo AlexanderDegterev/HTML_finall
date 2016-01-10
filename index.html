@@ -71,25 +71,25 @@
 //        });
 
 
-$(document).ready(function () {
-    $('#bxslider2').bxSlider({
-        mode: 'fade',
-        captions: false,
-        auto: true,
-        autoControls: true,
-        controls: false
-    });
-});
-
-$(document).ready(function () {
-    $('#bxslider3').bxSlider({
-        slideWidth: 210,
-        minSlides: 3,
-        maxSlides: 4,
-        slideMargin: 30,
-        auto:true
-    });
-});
+//$(document).ready(function () {
+//    $('#bxslider2').bxSlider({
+//        mode: 'fade',
+//        captions: false,
+//        auto: true,
+//        autoControls: true,
+//        controls: false
+//    });
+//});
+//
+//$(document).ready(function () {
+//    $('#bxslider3').bxSlider({
+//        slideWidth: 210,
+//        minSlides: 3,
+//        maxSlides: 4,
+//        slideMargin: 30,
+//        auto:true
+//    });
+//});
     </script>
 
     <!--<script type="text/javascript">-->
@@ -100,10 +100,22 @@ $(document).ready(function () {
             <!--});-->
         <!--});-->
     <!--</script>-->
+
+    <!--<script type="text/javascript">-->
+        <!--$("document").ready(function () {-->
+            <!--$(".toggle").click(function () {-->
+                <!--$(".menu").stop().slideToggle("slow");-->
+                <!--return false-->
+            <!--});-->
+
+        <!--});-->
+    <!--</script>-->
     <script type="text/javascript">
         $("document").ready(function () {
             $(".toggle").click(function () {
-                $(".menu").stop().slideToggle("slow");
+                $(".content"+$(this).attr('id')).stop().slideToggle("slow");
+//                $(".tabs").css("min-height", "850px")
+
                 return false
             });
 
@@ -360,13 +372,8 @@ $(document).ready(function () {
                                 <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                 <nav role="navigation">
-                                    <a class="toggle" href="#">more<span>w</span></a>
-                                    <ul class="menu">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Portfolio</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                    </ul>
+                                    <a class="toggle" id="hp" href="#">more<span>w</span></a>
+
                                 </nav>
                                 <a class="icon_quote" href="#"></a>
                                 <a class="icon_video" href="#"></a>
@@ -381,13 +388,13 @@ $(document).ready(function () {
                                 <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                 <nav role="navigation">
-                                    <a class="toggle" href="#">more<span>w</span></a>
-                                    <ul class="menu">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Portfolio</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                    </ul>
+                                    <a class="toggle" id="dell"href="#">more<span>w</span></a>
+                                    <!--<ul class="menu">-->
+                                        <!--<li><a href="#">Home</a></li>-->
+                                        <!--<li><a href="#">About</a></li>-->
+                                        <!--<li><a href="#">Portfolio</a></li>-->
+                                        <!--<li><a href="#">Contact</a></li>-->
+                                    <!--</ul>-->
                                 </nav>
                                 <a class="icon_quote" href="#"></a>
                                 <a class="icon_video" href="#"></a>
@@ -438,6 +445,22 @@ $(document).ready(function () {
                         </ul>
                     </div>
                 </div>
+
+                <!--<div class="contenthp">-->
+                    <!--<h2>Title Text HP</h2>-->
+                    <!--<h3>Subtitle text.</h3>-->
+                    <!--<p>Caption text lorem ipsum dolor sit amet,-->
+                        <!--sectetuer adipiscing elit,-->
+                        <!--Sed diam nonummy nibh euismod tincidunt  laoreet dolore magna aliquam erat volutpat.</p>-->
+                <!--</div>-->
+
+                <!--<div class="contentdell">-->
+                    <!--<h2>Title Text DELL</h2>-->
+                    <!--<h3>Subtitle text.</h3>-->
+                    <!--<p>Caption text lorem ipsum dolor sit amet,-->
+                        <!--sectetuer adipiscing elit,-->
+                        <!--Sed diam nonummy nibh euismod tincidunt  laoreet dolore magna aliquam erat volutpat.</p>-->
+                <!--</div>-->
             </div>
             <!--Content -->
         </div>
@@ -493,6 +516,24 @@ $(document).ready(function () {
 </div>
 
     <!--END tabs-->
+
+<div class="partner-content">
+    <div class="contenthp">
+        <h2>Title Text HP</h2>
+        <h3>Subtitle text.</h3>
+        <p>Caption text lorem ipsum dolor sit amet,
+            sectetuer adipiscing elit,
+            Sed diam nonummy nibh euismod tincidunt  laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+
+    <div class="contentdell">
+        <h2>Title Text DELL</h2>
+        <h3>Subtitle text.</h3>
+        <p>Caption text lorem ipsum dolor sit amet,
+            sectetuer adipiscing elit,
+            Sed diam nonummy nibh euismod tincidunt  laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+    </div>
 
 
     <div class="partner-slider">

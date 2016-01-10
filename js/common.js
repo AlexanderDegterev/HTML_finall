@@ -55,6 +55,24 @@ common = (function($) {
 			  captions: false
 			});	
 		}
+
+        $('#bxslider2').bxSlider({
+            mode: 'fade',
+            captions: false,
+            auto: true,
+            autoControls: true,
+            controls: false
+        });
+
+        $('#bxslider3').bxSlider({
+            slideWidth: 210,
+            minSlides: 3,
+            maxSlides: 4,
+            slideMargin: 30,
+            auto:true
+        });
+
+
 	};
     
 	
