@@ -8,6 +8,7 @@
     <!--<link href="css/style.css" rel="stylesheet" type="text/css"/>-->
     <link href="css/style.less" rel="stylesheet/less" type="text/css">
     <link href="css/jquery.bxslider.css" rel="stylesheet"/>
+    <link href="css/lightbox.css" rel="stylesheet"/>
     <script src="js/jquery.min.js"></script>
     <script src="js/less.min.js" type="text/javascript"></script>
     <!-- bxSlider Javascript file -->
@@ -30,6 +31,12 @@
                 return false
             });
         });
+    </script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        })
     </script>
 
 
@@ -603,6 +610,15 @@
 <div class="lightbox-template">
     <div class="wrapper-desc">
         <h1>LightBox</h1>
+        <a href="images/Gate_vasko_da_gama.jpg" data-lightbox="Gate_vasko_da_gama" data-title="My caption">Image #1</a>
+
+        <div class="grow pic">
+            <a href="images/Gate_Golden.jpg" data-lightbox="lightbox">
+                <img class="example-image pic" src="images/Gate_Golden.jpg" alt="Image #2">
+            </a>
+        </div>
+        <a href="images/Gate_sechen.jpg" data-lightbox="lightbox">Image #3</a>
+        <a href="images/Gate_si-o-se_pol.jpg" data-lightbox="lightbox">Image #4</a>
 
     </div>
 </div>
@@ -666,6 +682,6 @@
 
 </div>
 </div>
-
+<script src="js/lightbox-plus-jquery.js"></script>
 </body>
 </html>
