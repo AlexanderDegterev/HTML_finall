@@ -713,7 +713,7 @@
     display: inline-block;
     height: 54px;
     width: 54px;
-    background: url("../images/layout/icon_quote_desktop.png") no-repeat center;;
+    background: url("../images/layout/icon_quote_desktop.png") no-repeat center;
   }
 
   .icon_video {
@@ -722,7 +722,7 @@
     display: inline-block;
     height: 54px;
     width: 54px;
-    background: url("../images/layout/icon_video_desktop.png") no-repeat center;;
+    background: url("../images/layout/icon_video_desktop.png") no-repeat center;
   }
 
   .partner-content {
@@ -733,6 +733,7 @@
   .partner-content .message {
     float: left;
     width: 50%;
+    margin-bottom: 20px;
   }
   .partner-content .video-content {
     float: right;
@@ -750,11 +751,9 @@
     height: 200px;
     width: 200px;
     overflow: hidden;
-    margin: 0px;
+    margin: 0px 5px;
     border: 3px solid white;
     .box-shadow(false,5px, 5px, 5px, #111);
-//    -webkit-box-shadow: 5px 5px 5px #111;
-//    box-shadow: 5px 5px 5px #111;
     float: left;
     border-radius: 12px;
   }
@@ -772,6 +771,77 @@
     width: 240px;
 //    width: 9rem;
   }
+
+  /*Validation form*/
+
+  .validation-form {
+    margin-bottom: 50px;
+  }
+
+  .form-name{
+    float: left;
+    width: 48%;
+  }
+
+  .form-email{
+    float: right;
+    width: 48%;
+//    margin-left: 38px;
+  }
+
+  .form-message {
+    clear: both;
+  }
+
+  .form-name input, .form-email input, .form-message textarea{
+    width: 96%; /*391px;*/
+    height: 35px;
+    padding: 10px;
+    font: 400 18px Titillium Web, sans-serif;
+    color: #FFFFFF;
+    line-height: 1;
+    background: #273a71;
+    border: 0;
+    border-radius: 3px;
+  }
+
+  .form-message textarea{
+    margin: 25px 0 40px;
+    width: 98%; /*840px;*/
+    min-height: 180px;
+    resize: vertical;
+  }
+
+  .form-name input:hover, .form-email input:hover, .form-message textarea:hover{
+    box-shadow: 0px 0px 2px 2px #ec952a inset;
+  }
+
+  .form-message textarea:focus, .form-name input:focus, .form-email input:focus{
+    background:#343D83;
+    box-shadow:none;
+  }
+
+  .form-submit {
+    text-align: center;
+  }
+
+  .form-submit input{
+    margin: 0 auto;
+    background-color: #00a1e4;
+    border-radius: 5px;
+    color: #ffffff;
+    display: block;
+    font: 400 1em/3em "BentonSans-Bold",sans-serif;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  .form-submit input:hover{
+    opacity: 0.7;
+  }
+  /*end valadation form*/
 
   .already-partner {
     display: inline-block;
