@@ -21,6 +21,11 @@
 	*zoom: 1;
 }
 
+.partner-slider-desktop .bx-wrapper{
+    background-color: #ffffff;
+    margin: 0 auto 0px;
+}
+
 .bx-wrapper img {
     vertical-align:middle;
     margin: 50px auto;
