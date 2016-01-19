@@ -24,6 +24,7 @@
     <![endif]-->
     <script src="js/common.js"></script>
     <script src="js/lightbox-plus-jquery.js" async></script>
+    <script src="js/validate.js" async></script>
     <script type="text/javascript">
         $("document").ready(function () {
             $(".toggle").click(function () {
@@ -653,15 +654,26 @@
             <div class="form-name">
 
                 <input type="text" name="name" value="Your Name*"
-                       onfocus="if (this.value == 'Your Name*') {this.value=''}"/>
+                       onfocus="this.value=''" onblur="this.value='Введите текст'"/>
+                       <!--onfocus="if (this.value == 'Your Name*') {this.value=''}"-->
+                       <!--onfocusout="Your Name*"/>-->
             </div>
             <div class="form-email">
                 <input type="text" name="email" value="Your Email*"
                        onfocus="if (this.value == 'Your Email*') {this.value=''}"/>
             </div>
+            <div class="form-email">
+                <input type="text" name="password" value="Your password*"
+                       onfocus="if (this.value == 'Your Email*') {this.value=''}"/>
+            </div>
+            <div class="form-email">
+                <input type="text" name="password2" value="Repeat your password*"
+                       onfocus="if (this.value == 'Your Email*') {this.value=''}"/>
+            </div>
             <div class="form-message">
                 <textarea name="msg" onclick="this.value=''">Your message*</textarea>
             </div>
+            <input type="button" onclick="validate(this.form)" value="Check">
         </form>
         <div class="form-submit">
             <input type="submit" value="VALIDATION FORM"  />
