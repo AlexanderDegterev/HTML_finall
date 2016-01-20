@@ -5,50 +5,57 @@
  * Time: 16:02
  * To change this template use File | Settings | File Templates.
  */
-var validated;
 function showError(container, errorMessage) {
-    container.className = 'error';
-    var msgElem = document.createElement('span');
-    msgElem.className = "error-message";
+    container.className = 'error-message';
+    var msgElem = document.createElement('p');
+    msgElem.className = "error";
     msgElem.innerHTML = errorMessage;
-    container.appendChild(msgElem);
-    window.validated = false;
+    container.appendChild(msgElem);//after parrent
+    // элемент-список UL
+    var list = document.getElementById('error-message2')
+
+// новый элемент
+    var li = document.createElement('span')
+    li.innerHTML = 'Новый элемент списка'
+
+// добавление в конец
+    list.appendChild(li)
+
+
 }
 
 function resetError(container) {
-    container.className = '';
+//    container.className = '';
     if (container.lastChild.className == "error-message") {
         container.removeChild(container.lastChild);
     }
 }
 
 function validate(form) {
-    window.validated = true;
     var elems = form.elements;
 
     resetError(elems.name.parentNode);
     if (!elems.name.value) {
-        showError(elems.name.parentNode, ' Enter your name!');
+        showError(elems.name.parentNode, ' Укажите от кого.');
+        console.log(elems.name.parentNode+'parentNode121');
+
     }
 
     resetError(elems.password.parentNode);
     if (!elems.password.value) {
-        showError(elems.password.parentNode, ' Type your password.');
+        showError(elems.password.parentNode, ' Укажите пароль.');
     } else if (elems.password.value != elems.password2.value) {
-        showError(elems.password.parentNode, ' Passwords do not match.');
+        showError(elems.password.parentNode, ' Пароли не совпадают.');
     }
 
-    resetError(elems.to.parentNode);
-    if (!elems.to.value) {
-        showError(elems.to.parentNode, ' Select to.');
+//    resetError(elems.to.parentNode);
+//    if (!elems.to.value) {
+//        showError(elems.to.parentNode, ' Укажите, куда.');
+//    }
+
+    resetError(elems.msg.parentNode);
+    if (!elems.msg.value) {
+        showError(elems.msg.parentNode, ' Отсутствует текст.');
     }
 
-    resetError(elems.message.parentNode);
-    if (!elems.message.value) {
-        showError(elems.message.parentNode, ' Missed the text.');
-    }
-
-    if(window.validated) {
-        document.forms.form.submit();
-    }
 }

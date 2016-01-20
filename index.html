@@ -653,8 +653,9 @@
         <form>
             <div class="form-name">
                 <input type="text" name="name" value="Your Name*"
-                       onfocus="if (this.value == 'Your Name*') {this.value=''}"
-                       onblur="if (this.value=='') this.value = this.defaultValue"/>
+                       onfocus="if (this.value == 'Your Name*') {this.value='1'}"
+                       onblur="if (this.value=='1') this.value = this.defaultValue"/>
+                <p class="error">sssssss</p>
             </div>
             <div class="form-email">
                 <input type="text" name="email" value="Your Email*"
@@ -662,12 +663,12 @@
                        onblur="if (this.value=='') this.value = this.defaultValue"/>
             </div>
             <div class="form-name">
-                <input type="text" name="password" value="Your password*"
+                <input type="password" name="password" value="Your password*"
                        onfocus="if (this.value == 'Your password*') {this.value=''}"
                        onblur="if (this.value=='') this.value = this.defaultValue"/>
             </div>
             <div class="form-email">
-                <input type="text" name="password2" value="Repeat your password*"
+                <input type="password" name="password2" value="Repeat your password*"
                        onfocus="if (this.value == 'Repeat your password*') {this.value=''}"
                        onblur="if (this.value=='') this.value = this.defaultValue"/>
             </div>
