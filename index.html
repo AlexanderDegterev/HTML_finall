@@ -649,35 +649,38 @@
 
 <div class="validation-form">
     <div class="wrapper-desc">
-        <h1>Validation form</h1>
+        <h1>Validation form(JavaScript)</h1>
         <form>
             <div class="form-name">
-
                 <input type="text" name="name" value="Your Name*"
-                       onfocus="this.value=''" onblur="this.value='Введите текст'"/>
-                       <!--onfocus="if (this.value == 'Your Name*') {this.value=''}"-->
-                       <!--onfocusout="Your Name*"/>-->
+                       onfocus="if (this.value == 'Your Name*') {this.value=''}"
+                       onblur="if (this.value=='') this.value = this.defaultValue"/>
             </div>
             <div class="form-email">
                 <input type="text" name="email" value="Your Email*"
-                       onfocus="if (this.value == 'Your Email*') {this.value=''}"/>
+                       onfocus="if (this.value == 'Your Email*') {this.value=''}"
+                       onblur="if (this.value=='') this.value = this.defaultValue"/>
             </div>
-            <div class="form-email">
+            <div class="form-name">
                 <input type="text" name="password" value="Your password*"
-                       onfocus="if (this.value == 'Your Email*') {this.value=''}"/>
+                       onfocus="if (this.value == 'Your password*') {this.value=''}"
+                       onblur="if (this.value=='') this.value = this.defaultValue"/>
             </div>
             <div class="form-email">
                 <input type="text" name="password2" value="Repeat your password*"
-                       onfocus="if (this.value == 'Your Email*') {this.value=''}"/>
+                       onfocus="if (this.value == 'Repeat your password*') {this.value=''}"
+                       onblur="if (this.value=='') this.value = this.defaultValue"/>
             </div>
             <div class="form-message">
                 <textarea name="msg" onclick="this.value=''">Your message*</textarea>
             </div>
-            <input type="button" onclick="validate(this.form)" value="Check">
+            <input type="button" onclick="validate(this.form)" value="Validate">
+
+            <div class="form-submit">
+                <input type="button" onclick="validate(this.form)" value="VALIDATION FORM"  />
+            </div>
         </form>
-        <div class="form-submit">
-            <input type="submit" value="VALIDATION FORM"  />
-        </div>
+
 
     </div>
 </div>
