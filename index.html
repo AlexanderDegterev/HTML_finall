@@ -653,27 +653,31 @@
         <form>
             <div class="form-name">
                 <input type="text" name="name" value="Your Name*"
-                       onfocus="if (this.value == 'Your Name*') {this.value='1'}"
-                       onblur="if (this.value=='1') this.value = this.defaultValue"/>
-                <p class="error">sssssss</p>
+                       onfocus="if (this.value == 'Your Name*') {this.value=''}"
+                       onblur="if (this.value=='') this.value = this.value=''/*this.defaultValue*/"/>
+                <p class="error"></p>
             </div>
             <div class="form-email">
                 <input type="text" name="email" value="Your Email*"
                        onfocus="if (this.value == 'Your Email*') {this.value=''}"
-                       onblur="if (this.value=='') this.value = this.defaultValue"/>
+                       onblur="if (this.value=='') this.value = this.value=''/*this.defaultValue*/"/>
+                <p class="error"></p>
             </div>
             <div class="form-name">
                 <input type="password" name="password" value="Your password*"
                        onfocus="if (this.value == 'Your password*') {this.value=''}"
                        onblur="if (this.value=='') this.value = this.defaultValue"/>
+                <p class="error"></p>
             </div>
             <div class="form-email">
                 <input type="password" name="password2" value="Repeat your password*"
                        onfocus="if (this.value == 'Repeat your password*') {this.value=''}"
                        onblur="if (this.value=='') this.value = this.defaultValue"/>
+                <p class="error"></p>
             </div>
             <div class="form-message">
                 <textarea name="msg" onclick="this.value=''">Your message*</textarea>
+                <p class="error"></p>
             </div>
             <input type="button" onclick="validate(this.form)" value="Validate">
 
