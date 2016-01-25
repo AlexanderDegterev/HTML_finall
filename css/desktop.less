@@ -835,16 +835,11 @@
     width: 100%;
   }
 
-//  .form-email{
-//    width: 100%;
-
-//    padding-left: 3%;
-//  }
   .form-message {
     clear: both;
   }
 
-  .form-name input, .form-email input, .form-message textarea{
+  .form-name input, .form-message textarea{
     width: 96%;
     height: 35px;
     margin-bottom: 5%;
@@ -854,6 +849,11 @@
     background: #273A71 none repeat scroll 0% 0%;
     border: 0px none;
     border-radius: 3px;
+  }
+
+  .form-name label {
+    font: italic 400 18px Titillium Web,sans-serif;
+    color: #808080;
   }
 
   .form-message textarea{
@@ -894,6 +894,12 @@
   .form-submit input:hover{
     opacity: 1;
     color: #000000;
+  }
+
+  #name-error,#email-error {
+    position: absolute;
+    color: red;
+    margin-top: -27px;
   }
 
   .error {

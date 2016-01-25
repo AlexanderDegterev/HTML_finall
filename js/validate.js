@@ -11,10 +11,15 @@
 //    msgElem.className = "error";
 //    msgElem.innerHTML = errorMessage;
 //    container.appendChild(msgElem);//after parrent
-}
+//}
 
 function showError2(numberError, errorMessage) {
     var classForError = document.getElementsByClassName('error')[numberError];
+    classForError.innerHTML = errorMessage;
+}
+
+function showError3(errorMessage) {
+    var classForError = document.getElementById('name-error');
     classForError.innerHTML = errorMessage;
 }
 
@@ -31,28 +36,32 @@ function resetError2(numberError) {
 //}
 
 function validate(form) {
-
     var elems = form.elements;
+//    var a = elems.from.parentNode;
+    alert(elems);
 
     var numberError = 0;
     resetError2(numberError);
     if (!elems.name.value) {
 
         var errorMessage = 'Enter your name';
-        showError2(numberError, errorMessage);
+        showError3(errorMessage);
+//        showError2(numberError, errorMessage);
     }
 
     numberError = 3;
     resetError2(numberError);
     if (!elems.email.value) {
         errorMessage = 'Enter your e-mail';
-        showError2(numberError, errorMessage);
+        showError3(errorMessage);
+//        showError2(numberError, errorMessage);
     } else {
         var regex = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{2,9})$/;
         var email = elems.email.value;
         if (!regex.test(email)) {
             errorMessage = 'Enter a valid email';
-            showError2(numberError, errorMessage);
+//            showError2(numberError, errorMessage);
+            showError3(errorMessage);
         }
     }
 
