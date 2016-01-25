@@ -675,7 +675,7 @@
                     <input type="password" name="password" value="Your password*"
                            onfocus="if (this.value == 'Your password*') {this.value=''}"
                            onblur="if (this.value=='') this.value = this.defaultValue"/>
-                    <p class="error"></p>
+                    <p id="pass-error"></p>
                 </div>
                 <div class="form-name">
                     <label for="tel">Your phone number:</label>
@@ -701,9 +701,6 @@
                            onblur="if (this.value=='') this.value = this.defaultValue"/>
                     <p class="error"></p>
                 </div>
-                <div id="parentElement">
-                    <input type="text" onchange="alert(this.parentNode);" />
-                </div>
                 <div class="form-name">
                     <label for="country">Enter your country:</label>
                     <input type="text" name="country" placeholder="Enter your country"/>
@@ -714,7 +711,7 @@
 
             <div class="form-message">
                 <textarea name="msg" onclick="this.value=''">Your message*</textarea>
-                <p class="error"></p>
+                <p id="msg-error"></p>
             </div>
             <!--<input type="button" onclick="validate(this.form)" value="Validate">-->
 
