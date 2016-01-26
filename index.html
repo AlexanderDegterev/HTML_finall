@@ -666,7 +666,9 @@
                 <div class="form-name">
                     <label for="name">Your Name:</label>
                     <input type="text" name="name" placeholder="Your Name*"/>
+                    <label class="w3-label">Your Name DOWN</label>
                     <!--<p class="error"></p>-->
+                    <h1>12345</h1>
                     <p id="name-error"></p>
                 </div>
 
@@ -718,6 +720,28 @@
             <div class="form-submit">
                 <input type="button" onclick="validate(this.form)" value="VALIDATION FORM"  />
             </div>
+        </form>
+    </div>
+</div>
+
+<div class="validation-form">
+    <div class="wrapper-desc">
+        <h1>Validation form(JQuery)</h1>
+
+        <form id="sampleForm" method="post" action="" novalidate>
+            <div class="message"></div>
+            <input type="text" name="firstName" data-label="First Name" required/>
+            <input type="text" name="lastName" data-label="Last Name" required/>
+            <input type="email" name="lastName" data-label="Email" required/>
+            <input type="password" name="lastName" data-label="Password" required/>
+            <select class="select-country" form="sampleForm" required>
+                <option disabled selected>Choose your country</option>
+                <option value="1">Belarus</option>
+                <option value="2">USA</option>
+                <option value="3">Russia</option>
+            </select>
+            <input type="checkbox" name="agreements" data-label="I agree" required>
+            <input type="submit" value="Submit"/>
         </form>
     </div>
 </div>
@@ -782,5 +806,6 @@
 
 </div>
 </div>
+
 </body>
 </html>

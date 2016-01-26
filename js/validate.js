@@ -5,13 +5,6 @@
  * Time: 16:02
  * To change this template use File | Settings | File Templates.
  */
-//function showError(container, errorMessage) {
-//    container.className = 'error-message';
-//    var msgElem = document.createElement('p');
-//    msgElem.className = "error";
-//    msgElem.innerHTML = errorMessage;
-//    container.appendChild(msgElem);//after parrent
-//}
 
 function showError2(numberError, errorMessage) {
     var classForError = document.getElementsByClassName('error')[numberError];
@@ -23,29 +16,32 @@ function showError3(idError,errorMessage) {
     classForError.innerHTML = errorMessage;
 }
 
-//function resetError2(numberError) {
-//    var classForError = document.getElementsByClassName('error')[numberError];
-//    classForError.innerHTML = '';
-//}
+
 function resetError2(idError) {
     var classForError = document.getElementById(idError);
     classForError.innerHTML = '';
 }
 
-//function resetError(container) {
-//    container.className = '';
-//    if (container.lastChild.className == "error") {
-//        container.removeChild(container.lastChild);
-//    }
-//}
+
 
 function validate(form) {
+
+
     var elems = form.elements;
+    var node = elems.getElementsByTagName("p")[0].parentNode;
+    alert(node);
+    node.style.backgroundColor = '#0033dd';
 
 //    var numberError = 0;
     var idError = "name-error";
-    alert(idError);
     resetError2(idError);
+//    var parent = elems.name.nextSibling;
+//    alert (parent + "-parent");
+//    parent.innerHTML = "TEST";
+//    if (parent.nextSibling.nodeName == "p") {
+//        alert("Next sibling is p! " /*+ link.innerHTML*/);
+//    }
+
     if (!elems.name.value) {
 
         var errorMessage = 'Enter your name';
@@ -101,4 +97,51 @@ function validate(form) {
 //        showError2(numberError, errorMessage);
         showError3(idError,errorMessage);
     }
+
+    // JQuery
+//    $("document").ready(function () {
+    $(function() {
+        $("#productform").validate({
+            rules: {
+                prodid: {
+                    required: true,
+                    maxlength: 10
+                },
+                email: {
+                    required: true,
+                    email: true,
+                    minlength: 10
+                },
+                address: {
+                    required: true,
+                    rangelength: [10, 250]
+                },
+                message: {
+                    rangelength: [50, 1050]
+                }
+            }
+        });
+    });
+//    });
+    // end JQuery
+
+    // old version
+
+    //function showError(container, errorMessage) {
+//    container.className = 'error-message';
+//    var msgElem = document.createElement('p');
+//    msgElem.className = "error";
+//    msgElem.innerHTML = errorMessage;
+//    container.appendChild(msgElem);//after parrent
+//}
+//function resetError(container) {
+//    container.className = '';
+//    if (container.lastChild.className == "error") {
+//        container.removeChild(container.lastChild);
+//    }
+//}
+//function resetError2(numberError) {
+//    var classForError = document.getElementsByClassName('error')[numberError];
+//    classForError.innerHTML = '';
+//}
 }

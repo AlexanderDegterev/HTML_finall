@@ -45,11 +45,9 @@ common = (function($) {
 			});
 			button.toggleClass('active');
 		}
-    };	
-	
-	
-	
-	// I
+    };
+
+    // I
 	o.sliderInitialization = function() {
 		var query = Modernizr.mq('(max-width: 800px)');
 		
@@ -81,11 +79,8 @@ common = (function($) {
             auto:true
         });
 
-
 	};
-    
-	
-    
+
     return o;
 })($);
 
