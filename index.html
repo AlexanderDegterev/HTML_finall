@@ -30,17 +30,22 @@
     <script type="text/javascript">
         $("document").ready(function () {
             $(".toggle").click(function () {
+                var openBlock = $("div.contenthp");
+                if (openBlock.is(':visible')) {
+                    alert('Y0ES');
+                    openBlock.slideToggle("slow");
+                }
                 var hBlock = $(".content" + $(this).attr('id'));
                 var btnId = $(".toggle#" + $(this).attr('id'));
                 var btnIdspan = $(".toggle#" + $(this).attr('id')+" "+"span");
 //                $(this).text(hBlock.is(':visible') ? 'more' : 'Скрыть');
 //                $(".content" + $(this).attr('id')).stop().slideToggle("slow");
                 if (hBlock.is(':visible')) {
-                    btnId.text('more');
-                    $(".toggle2").text('w');
+                    btnId.text('werom');
+//                    $(".toggle2").text('w');
                 } else if (hBlock.is(':hidden')) {
-                    btnId.text('less');
-                    $(".toggle2 ").text('v');
+                    btnId.text('vssel');
+//                    $(".toggle2").text('v');
                 }
                 $(".content" + $(this).attr('id')).slideToggle("slow");
 
@@ -407,7 +412,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" id="hp">more</a><span class="toggle2">w</span>
+                                        <a class="toggle" id="hp">werom</a><!--<span class="toggle2">w</span>-->
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -424,7 +429,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" id="dell">more<span>w</span></a>
+                                        <a class="toggle" id="dell">werom</a><!--<span class="toggle2">w</span>-->
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -552,7 +557,6 @@
                 <p>Caption text lorem ipsum dolor sit amet,
                     sectetuer adipiscing elit,
                     Sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam erat volutpat.</p>
-                <!--</div>-->
             </div>
             <div class="video-content">
                 <video  src="video/Blinky-Bill-the-Movie.mp4" autobuffer controls poster="images/content/blinkyBill.jpg">
@@ -562,17 +566,27 @@
             </div>
         </div>
 
-        <!--<div class="message">-->
-            <!--<div class="contentdell hidden-block">-->
-                <!--<h2>Title Text DELL</h2>-->
+        <div class="contentdell hidden-block">
+            <div class="message">
+                <!--<div class="contenthp hidden-block">-->
+                <h2>Title Text lorem
+                    ispum dolor Dell</h2>
 
-                <!--<h3>Subtitle text.</h3>-->
+                <h3>Subtitle text.</h3>
 
-                <!--<p>Caption text lorem ipsum dolor sit amet,-->
-                    <!--sectetuer adipiscing elit,-->
-                    <!--Sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam erat volutpat.</p>-->
-            <!--</div>-->
-        <!--</div>-->
+                <p>Caption text lorem ipsum dolor sit amet,
+                    sectetuer adipiscing elit,
+                    Sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam erat volutpat.</p>
+            </div>
+            <div class="video-content">
+                <video  src="video/Blinky-Bill-the-Movie.mp4" autobuffer controls poster="images/content/blinkyBill.jpg">
+                    <p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download
+                        the video</a> instead.</p>
+                </video>
+            </div>
+        </div>
+
+
     </div>
 </div>
 

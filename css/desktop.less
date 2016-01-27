@@ -693,16 +693,32 @@
     height: 100px;
     display: inline-block;
     margin: 7% 0 -6% 0%;
-    font-family: 'bentonsans-bold', sans-serif;
+
   }
 
   nav[role="navigation"] a {
+    display: block;
     font-size: 25px;
     color: #00a1e4;
     text-decoration: none;
-    padding: 0 15px;
+    padding: 0px 0px 0px 20px;
     line-height: 35px;
+    font-family: 'bentonsans-bold', sans-serif;
+    unicode-bidi:bidi-override;
+    direction:rtl;
   }
+
+//  nav[role="navigation"] a:after {
+//  content:"v";
+//  color:red;
+//    font: 400 25px "sd_helveticons",sans-serif;
+//  }
+
+  nav[role="navigation"] a:first-letter {
+    color:#00A1E4;
+    font: 400 25px "sd_helveticons",sans-serif;
+  }
+
   nav[role="navigation"] li {width: 100%; height: auto; text-align: center; background: #bdc3c7; border: 1px solid #fff;padding: 10px 0;}
 
   nav[role="navigation"] span  {
