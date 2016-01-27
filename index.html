@@ -30,7 +30,20 @@
     <script type="text/javascript">
         $("document").ready(function () {
             $(".toggle").click(function () {
-                $(".content" + $(this).attr('id')).stop().slideToggle("slow");
+                var hBlock = $(".content" + $(this).attr('id'));
+                var btnId = $(".toggle#" + $(this).attr('id'));
+                var btnIdspan = $(".toggle#" + $(this).attr('id')+" "+"span");
+//                $(this).text(hBlock.is(':visible') ? 'more' : 'Скрыть');
+//                $(".content" + $(this).attr('id')).stop().slideToggle("slow");
+                if (hBlock.is(':visible')) {
+                    btnId.text('more');
+                    $(".toggle2").text('w');
+                } else if (hBlock.is(':hidden')) {
+                    btnId.text('less');
+                    $(".toggle2 ").text('v');
+                }
+                $(".content" + $(this).attr('id')).slideToggle("slow");
+
                 //$(".tabs").css("min-height", "850px")
                 return false
             });
@@ -360,98 +373,109 @@
 
                                 <!--/*Обернуть в див с фмксированными размерами-->
                                 <!--пересмотреть закладки*/-->
+                                <div class="bxslider-inner-wrapper">
 
-                                <div class="partner-slider-desktop-img">
-                                    <img src="images/layout/logo-ibm.png" title="IBM" alt="IBM"/>
+                                    <div class="partner-slider-desktop-img">
+                                        <img src="images/layout/logo-ibm.png" title="IBM" alt="IBM"/>
+                                    </div>
+
+                                    <h3>IBM</h3>
+
+                                    <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
+
+                                    <nav role="navigation">
+                                        <a class="toggle" href="#">more<span>w</span></a>
+                                        <ul class="menu">
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Portfolio</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                    <a class="icon_quote" href="#"></a>
+                                    <a class="icon_video" href="#"></a>
                                 </div>
-
-                                <h3>IBM</h3>
-
-                                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
-
-                                <nav role="navigation">
-                                    <a class="toggle" href="#">more<span>w</span></a>
-                                    <ul class="menu">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Portfolio</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                    </ul>
-                                </nav>
-                                <a class="icon_quote" href="#"></a>
-                                <a class="icon_video" href="#"></a>
                             </li>
                             <li>
-                                <div class="partner-slider-desktop-img">
-                                <img src="images/layout/logo-hp.png" title="HP" alt="hp"/>
+                                <div class="bxslider-inner-wrapper">
+                                    <div class="partner-slider-desktop-img">
+                                        <img src="images/layout/logo-hp.png" title="HP" alt="hp"/>
                                     </div>
 
-                                <h3>HP</h3>
+                                    <h3>HP</h3>
 
-                                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
+                                    <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
-                                <nav role="navigation">
-                                    <a class="toggle" id="hp">more<span>w</span></a>
-                                </nav>
-                                <a class="icon_quote" href="#"></a>
-                                <a class="icon_video" href="#"></a>
+                                    <nav role="navigation">
+                                        <a class="toggle" id="hp">more</a><span class="toggle2">w</span>
+                                    </nav>
+                                    <a class="icon_quote" href="#"></a>
+                                    <a class="icon_video" href="#"></a>
+                                </div>
                             </li>
                             <li>
-                                <div class="partner-slider-desktop-img">
-                                <img src="images/layout/logo-dell.png" title="Dell" alt="DELL"/>
+                                <div class="bxslider-inner-wrapper">
+                                    <div class="partner-slider-desktop-img">
+                                        <img src="images/layout/logo-dell.png" title="Dell" alt="DELL"/>
                                     </div>
 
-                                <h3>Dell</h3>
+                                    <h3>Dell</h3>
 
-                                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
+                                    <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
-                                <nav role="navigation">
-                                    <a class="toggle" id="dell">more<span>w</span></a>
-                                </nav>
-                                <a class="icon_quote" href="#"></a>
-                                <a class="icon_video" href="#"></a>
+                                    <nav role="navigation">
+                                        <a class="toggle" id="dell">more<span>w</span></a>
+                                    </nav>
+                                    <a class="icon_quote" href="#"></a>
+                                    <a class="icon_video" href="#"></a>
+                                </div>
                             </li>
                             <li>
-                                <div class="partner-slider-desktop-img">
-                                <img src="images/layout/logo-cisco.png" title="Cisco" alt="Cisco"/>
+                                <div class="bxslider-inner-wrapper">
+                                    <div class="partner-slider-desktop-img">
+                                        <img src="images/layout/logo-cisco.png" title="Cisco" alt="Cisco"/>
                                     </div>
 
-                                <h3>Cisco</h3>
+                                    <h3>Cisco</h3>
 
-                                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
+                                    <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
-                                <nav role="navigation">
-                                    <a class="toggle" href="#">more<span>w</span></a>
-                                    <ul class="menu">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Portfolio</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                    </ul>
-                                </nav>
-                                <a class="icon_quote" href="#"></a>
-                                <a class="icon_video" href="#"></a>
+                                    <nav role="navigation">
+                                        <a class="toggle" href="#">more<span>w</span></a>
+                                        <ul class="menu">
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Portfolio</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                    <a class="icon_quote" href="#"></a>
+                                    <a class="icon_video" href="#"></a>
+                                </div>
                             </li>
+
                             <li>
-                                <div class="partner-slider-desktop-img">
-                                <img src="images/layout/logo-sas.png" title="SAS" alt="SAS"/>
+                                <div class="bxslider-inner-wrapper">
+                                    <div class="partner-slider-desktop-img">
+                                        <img src="images/layout/logo-sas.png" title="SAS" alt="SAS"/>
                                     </div>
 
-                                <h3>SAS</h3>
+                                    <h3>SAS</h3>
 
-                                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
+                                    <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
-                                <nav role="navigation">
-                                    <a class="toggle" href="#">more<span>w</span></a>
-                                    <ul class="menu">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Portfolio</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                    </ul>
-                                </nav>
-                                <a class="icon_quote" href="#"></a>
-                                <a class="icon_video" href="#"></a>
+                                    <nav role="navigation">
+                                        <a class="toggle" href="#">more<span>w</span></a>
+                                        <ul class="menu">
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Portfolio</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                    <a class="icon_quote" href="#"></a>
+                                    <a class="icon_video" href="#"></a>
+                                </div>
                             </li>
 
                         </ul>
@@ -517,6 +541,7 @@
 <div class="partner-content">
     <div class="wrapper-desc">
         <div class="contenthp hidden-block">
+            <!--<div class="contenthp">-->
             <div class="message">
                 <!--<div class="contenthp hidden-block">-->
                 <h2>Title Text lorem

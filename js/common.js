@@ -72,10 +72,10 @@ common = (function($) {
         });
 
         $('#bxslider3').bxSlider({
-            slideWidth: 210,
+            slideWidth: 222,
             minSlides: 3,
             maxSlides: 4,
-            slideMargin: 30,
+            slideMargin: 10,
             auto:true
         });
 

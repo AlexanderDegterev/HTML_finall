@@ -58,7 +58,7 @@
     font: 0.9em 'bentonsans',sans-serif;
     margin: 4% 0% 2% 10%;
     text-align: left;
-    width: 100%;
+    width: 88%;
 }
 
 .partner-slider-desktop .bx-wrapper img{
@@ -145,7 +145,7 @@
 }
 
 .partner-slider .bx-wrapper .bx-viewport {
-    /*height: 554px !important;*/
+    /*height: 340px !important;*/
     overflow: visible !important;
     -moz-box-shadow: 0 0 5px #ccc;
     -webkit-box-shadow: 0 0 5px #ccc;
@@ -185,8 +185,8 @@
     position: absolute;
     height: 30px;
     bottom: 5px;
-    top:91%;
-    right: 50%;
+    top:104%;
+    right: 45%;
 }
 
 /* LOADER */
