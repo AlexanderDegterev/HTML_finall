@@ -29,15 +29,42 @@
     <script src="js/validate.js" async></script>
     <script type="text/javascript">
         $("document").ready(function () {
+            var slider = $('#bxslider3').bxSlider({
+                slideWidth: 222,
+                minSlides: 3,
+                maxSlides: 4,
+                slideMargin: 10,
+                auto: true
+            });
+
             $(".toggle").click(function () {
-                var openBlock = $("div.contenthp");
-                if (openBlock.is(':visible')) {
-                    alert('Y0ES');
-                    openBlock.slideToggle("slow");
+                slider.stopAuto();
+//                slider.startAuto();
+//                div[class*='grap']
+                var test = $("div[name=partnerContent]");
+                if (test.is(':visible')) {
+                    var testID = test.attr('id');
+                    alert(testID+'-TESTID')
+//                    alert('YES');
+                    test.slideUp();
                 }
+//                test.slideUp();
+//                alert(test);
+                var fullContent = $("div.partner-content");
+                var oB = $("div[class^='content']").length;
+//                alert(oB);
+//                $("div[class*='grap']").length
+//                if (oB.is(':visible')) {
+//                    alert('1 yes');
+//                }
+//                var openBlock = $("div.contenthp");
+//                if (openBlock.is(':visible')) {
+//                    alert('YES');
+//                    openBlock.slideUp();
+//                }
                 var hBlock = $(".content" + $(this).attr('id'));
                 var btnId = $(".toggle#" + $(this).attr('id'));
-                var btnIdspan = $(".toggle#" + $(this).attr('id')+" "+"span");
+                var btnIdspan = $(".toggle#" + $(this).attr('id') + " " + "span");
 //                $(this).text(hBlock.is(':visible') ? 'more' : 'Скрыть');
 //                $(".content" + $(this).attr('id')).stop().slideToggle("slow");
                 if (hBlock.is(':visible')) {
@@ -47,7 +74,8 @@
                     btnId.text('vssel');
 //                    $(".toggle2").text('v');
                 }
-                $(".content" + $(this).attr('id')).slideToggle("slow");
+                $(".content" + $(this).attr('id')).stop().slideDown();
+//                $(".content" + $(this).attr('id')).stop().slideToggle("slow");
 
                 //$(".tabs").css("min-height", "850px")
                 return false
@@ -375,7 +403,6 @@
                     <div class="partner-slider-wrapper">
                         <ul id="bxslider3">
                             <li>
-
                                 <!--/*Обернуть в див с фмксированными размерами-->
                                 <!--пересмотреть закладки*/-->
                                 <div class="bxslider-inner-wrapper">
@@ -389,7 +416,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" href="#">more<span>w</span></a>
+                                        <a class="toggle" href="#">werom</a>
                                         <ul class="menu">
                                             <li><a href="#">Home</a></li>
                                             <li><a href="#">About</a></li>
@@ -446,7 +473,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" href="#">more<span>w</span></a>
+                                        <a class="toggle" href="#">werom</a>
                                         <ul class="menu">
                                             <li><a href="#">Home</a></li>
                                             <li><a href="#">About</a></li>
@@ -470,7 +497,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" href="#">more<span>w</span></a>
+                                        <a class="toggle" href="#">werom</a>
                                         <ul class="menu">
                                             <li><a href="#">Home</a></li>
                                             <li><a href="#">About</a></li>
@@ -543,9 +570,9 @@
 
     <!--END tabs-->
 
-<div class="partner-content">
+<div class="partner-content" >
     <div class="wrapper-desc">
-        <div class="contenthp hidden-block">
+        <div class="contenthp hidden-block" name="partnerContent">
             <!--<div class="contenthp">-->
             <div class="message">
                 <!--<div class="contenthp hidden-block">-->
@@ -566,7 +593,7 @@
             </div>
         </div>
 
-        <div class="contentdell hidden-block">
+        <div class="contentdell hidden-block" name="partnerContent">
             <div class="message">
                 <!--<div class="contenthp hidden-block">-->
                 <h2>Title Text lorem

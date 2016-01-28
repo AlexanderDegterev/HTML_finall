@@ -70,14 +70,14 @@ common = (function($) {
             autoControls: true,
             controls: false
         });
-
-        $('#bxslider3').bxSlider({
-            slideWidth: 222,
-            minSlides: 3,
-            maxSlides: 4,
-            slideMargin: 10,
-            auto:true
-        });
+        /*Перенес в html*/
+//        $('#bxslider3').bxSlider({
+//            slideWidth: 222,
+//            minSlides: 3,
+//            maxSlides: 4,
+//            slideMargin: 10,
+//            auto:true
+//        });
 
 	};
 
