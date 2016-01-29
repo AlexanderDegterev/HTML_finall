@@ -4,7 +4,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finall</title>
+    <title>Final</title>
     <!--<link href="css/style.css" rel="stylesheet" type="text/css"/>-->
     <link href="css/style.less" rel="stylesheet/less" type="text/css">
     <link href="css/jquery.bxslider.css" rel="stylesheet"/>
@@ -30,60 +30,42 @@
     <script type="text/javascript">
         $("document").ready(function () {
             var slider = $('#bxslider3').bxSlider({
-                slideWidth: 222,
+                slideWidth: 239,
                 minSlides: 3,
                 maxSlides: 4,
-                slideMargin: 10,
+                slideMargin: 30,
                 auto: true
             });
 
-            $(".toggle").click(function () {
+            $(".toggle").click(function (e) {
                 slider.stopAuto();
-//                slider.startAuto();
-//                div[class*='grap']
-                var test = $("a[name=navigat]:visible");
-                var testL = $("a[name=navigat]:visible").length;
-//                test.text('werom');
-                alert(testL);
-                if (test.is(':visible')) {
-                    var testID = test.attr('id');
-                    var btnId2 = $(".toggle#"+test.attr('id'));
-//                    btnId2.text('werom');
-//                    alert(btnId2);
-                    test.slideUp();
-                }
-//                test.slideUp();
-//                alert(test);
-                var fullContent = $("div.partner-content");
-                var oB = $("div[class^='content']").length;
-//                alert(oB);
-//                $("div[class*='grap']").length
-//                if (oB.is(':visible')) {
-//                    alert('1 yes');
-//                }
-//                var openBlock = $("div.contenthp");
-//                if (openBlock.is(':visible')) {
-//                    alert('YES');
-//                    openBlock.slideUp();
-//                }
-                var hBlock = $(".content" + $(this).attr('id'));
-                var btnId = $(".toggle#" + $(this).attr('id'));
-                var btnIdspan = $(".toggle#" + $(this).attr('id') + " " + "span");
-//                $(this).text(hBlock.is(':visible') ? 'more' : 'Скрыть');
-//                $(".content" + $(this).attr('id')).stop().slideToggle("slow");
-                if (hBlock.is(':visible')) {
-                    btnId.text('werom');
-                    $(".content" + $(this).attr('id')).stop().slideUp();
-//                    $(".toggle2").text('w');
-                } else if (hBlock.is(':hidden')) {
-                    btnId.text('vssel');
-                    $(".content" + $(this).attr('id')).stop().slideDown();
-//                    $(".toggle2").text('v');
-                }
-//                $(".content" + $(this).attr('id')).stop().slideDown();
-//                $(".content" + $(this).attr('id')).stop().slideToggle("slow");
+                var X = e.pageX;
+                alert(X);
 
-                //$(".tabs").css("min-height", "850px")
+                var toggleVisible = $("a[name=toggleNav]:visible"); // find all buttons with toggle logic
+//                var testL = $("a[name=toggleNav]:visible").length;
+                toggleVisible.text('werom'); // set more label to the buttons
+
+                var contentVisible = $("div[class^='content'][name='partnerContent']:visible");
+                var contentVisibleLength = contentVisible.length;
+//                alert(contentLength+" - Visible content");
+                if (contentVisibleLength != 0) {
+                    contentVisible.stop().slideUp();
+                    $("div.triangle").css("display","none");
+                }
+                var contentIdClick = $(".content" + $(this).attr('id'));
+                var linkClickId = $(".toggle#" + $(this).attr('id'));
+//                $(this).text(hBlock.is(':visible') ? 'more' : 'Скрыть');
+                if (contentIdClick.is(':visible')) {
+                    linkClickId.text('werom');
+                    $(".content" + $(this).attr('id')).stop().slideUp();
+                    $("div.triangle").css("display","none");
+                    slider.startAuto();
+                } else if (contentIdClick.is(':hidden')) {
+                    linkClickId.text('vssel');
+                    $(".content" + $(this).attr('id')).stop().slideDown();
+                    $("div.triangle").css("margin-left", X+"px").css("display","block");
+                }
                 return false
             });
         });
@@ -422,13 +404,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" name="navigat" href="#">werom</a>
-                                        <ul class="menu">
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="#">About</a></li>
-                                            <li><a href="#">Portfolio</a></li>
-                                            <li><a href="#">Contact</a></li>
-                                        </ul>
+                                        <a class="toggle" name="toggleNav" id="ibm" href="#">werom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -445,7 +421,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" name="navigat" id="hp">werom</a><!--<span class="toggle2">w</span>-->
+                                        <a class="toggle" name="toggleNav" id="hp">werom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -462,7 +438,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" id="dell">werom</a><!--<span class="toggle2">w</span>-->
+                                        <a class="toggle" name="toggleNav" id="dell">werom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -479,13 +455,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" href="#">werom</a>
-                                        <ul class="menu">
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="#">About</a></li>
-                                            <li><a href="#">Portfolio</a></li>
-                                            <li><a href="#">Contact</a></li>
-                                        </ul>
+                                        <a class="toggle" name="toggleNav" id="cisco" >werom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -503,13 +473,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" href="#">werom</a>
-                                        <ul class="menu">
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="#">About</a></li>
-                                            <li><a href="#">Portfolio</a></li>
-                                            <li><a href="#">Contact</a></li>
-                                        </ul>
+                                        <a class="toggle" name="toggleNav" id="sas">werom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -517,6 +481,7 @@
                             </li>
 
                         </ul>
+                        <div class="triangle"></div>
                     </div>
                 </div>
 
@@ -576,12 +541,10 @@
 
     <!--END tabs-->
 
-<div class="partner-content" >
+<div class="partner-content">
     <div class="wrapper-desc">
         <div class="contenthp hidden-block" name="partnerContent">
-            <!--<div class="contenthp">-->
             <div class="message">
-                <!--<div class="contenthp hidden-block">-->
                 <h2>Title Text lorem
                     ispum dolor HP</h2>
 
@@ -592,7 +555,7 @@
                     Sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam erat volutpat.</p>
             </div>
             <div class="video-content">
-                <video  src="video/Blinky-Bill-the-Movie.mp4" autobuffer controls poster="images/content/blinkyBill.jpg">
+                <video src="video/Blinky-Bill-the-Movie.mp4" autobuffer controls poster="images/content/blinkyBill.jpg">
                     <p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download
                         the video</a> instead.</p>
                 </video>
@@ -601,7 +564,6 @@
 
         <div class="contentdell hidden-block" name="partnerContent">
             <div class="message">
-                <!--<div class="contenthp hidden-block">-->
                 <h2>Title Text lorem
                     ispum dolor Dell</h2>
 
@@ -612,16 +574,73 @@
                     Sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam erat volutpat.</p>
             </div>
             <div class="video-content">
-                <video  src="video/Blinky-Bill-the-Movie.mp4" autobuffer controls poster="images/content/blinkyBill.jpg">
+                <video src="video/Blinky-Bill-the-Movie.mp4" autobuffer controls poster="images/content/blinkyBill.jpg">
                     <p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download
                         the video</a> instead.</p>
                 </video>
             </div>
         </div>
 
+        <div class="contentcisco hidden-block" name="partnerContent">
+            <div class="message">
+                <h2>Title Text lorem
+                    ispum dolor Cisco</h2>
+
+                <h3>Subtitle text.</h3>
+
+                <p>Caption text lorem ipsum dolor sit amet,
+                    sectetuer adipiscing elit,
+                    Sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam erat volutpat.</p>
+            </div>
+            <div class="video-content">
+                <video src="video/Blinky-Bill-the-Movie.mp4" autobuffer controls poster="images/content/blinkyBill.jpg">
+                    <p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download
+                        the video</a> instead.</p>
+                </video>
+            </div>
+        </div>
+
+        <div class="contentsas hidden-block" name="partnerContent">
+            <div class="message">
+                <h2>Title Text lorem
+                    ispum dolor SAS</h2>
+
+                <h3>Subtitle text.</h3>
+
+                <p>Caption text lorem ipsum dolor sit amet,
+                    sectetuer adipiscing elit,
+                    Sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam erat volutpat.</p>
+            </div>
+            <div class="video-content">
+                <video src="video/Blinky-Bill-the-Movie.mp4" autobuffer controls poster="images/content/blinkyBill.jpg">
+                    <!--<p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download-->
+                        <!--the video</a> instead.</p>-->
+                </video>
+            </div>
+        </div>
+
+        <div class="contentibm hidden-block" name="partnerContent">
+            <div class="message">
+                <h2>Title Text lorem
+                    ispum dolor IBM</h2>
+
+                <h3>Subtitle text.</h3>
+
+                <p>Caption text lorem ipsum dolor sit amet,
+                    sectetuer adipiscing elit,
+                    Sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam erat volutpat.</p>
+            </div>
+            <div class="video-content">
+                <video src="video/Blinky-Bill-the-Movie.mp4" autobuffer controls poster="images/content/blinkyBill.jpg">
+                    <p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download
+                        the video</a> instead.</p>
+                </video>
+            </div>
+        </div>
 
     </div>
 </div>
+<!--End content hidden-->
 
 
 <div class="partner-slider">

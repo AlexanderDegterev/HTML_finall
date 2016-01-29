@@ -35,7 +35,8 @@
   }
 
   .wrapper-desc {
-    width: /*978px;*/66%;
+    width: /*978px;*/100%;
+    max-width: 1024px;
     margin: 0 auto;
   }
 
@@ -708,28 +709,33 @@
     direction:rtl;
   }
 
-//  nav[role="navigation"] a:after {
-//  content:"v";
-//  color:red;
-//    font: 400 25px "sd_helveticons",sans-serif;
-//  }
+  .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 27px solid #FFF;
+    display: none;
+    margin-top: 17px;
+  }
 
   nav[role="navigation"] a:first-letter {
     color:#00A1E4;
     font: 400 25px "sd_helveticons",sans-serif;
   }
 
-  nav[role="navigation"] li {width: 100%; height: auto; text-align: center; background: #bdc3c7; border: 1px solid #fff;padding: 10px 0;}
-
-  nav[role="navigation"] span  {
-    font: 400 25px "sd_helveticons",sans-serif;
+  nav[role="navigation"] li {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: #bdc3c7;
+    border: 1px solid #fff;
+    padding: 10px 0;
   }
 
   .toggle {
     cursor: pointer;
-    span {
-      font: 400 25px "sd_helveticons", sans-serif;
-    }
   }
 
   .menu {
@@ -760,15 +766,12 @@
     width: 100%;
     background-color: #f1f1f1;
     margin-bottom: 0px;
+    margin-top: -7px;
   }
-
-//  .partner-content .contenthp {
-//    opacity: 0;
-//  }
 
   .partner-content .message {
     float: left;
-//    height: 360px;
+    height: 290px;
     width: 50%;
     margin-bottom: 20px;
     background-color: #ffffff;
@@ -788,7 +791,7 @@
   }
   .partner-content .video-content {
     float: right;
-//    height: 360px;
+    height: 290px;
     width: 50%;
     margin-bottom: 20px;
     background-color: #ffffff;
@@ -801,7 +804,8 @@
   .lightbox-template {
     display: block;
     float: left;
-    width: 100%;
+    width: 90%;
+    padding: 0% 5%;
     margin: 15px 0px 60px;
   }
 
@@ -844,7 +848,8 @@
   .validation-form {
     float: left;
     display: block;
-    width: 100%;
+    width: 90%;
+    padding: 0% 5%;
     margin-bottom: 50px;
     h1 {
       margin-bottom: 5%;

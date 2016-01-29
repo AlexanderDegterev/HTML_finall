@@ -28,11 +28,11 @@ function validate(form) {
 
 
     var elems = form.elements;
-    var node = elems.getElementsByTagName("p")[0].parentNode;
+//    var node = elems.getElementsByTagName("p")[0].parentNode;
 //    ищим первый див
 //    getElementsbyClassName error
-    alert(node);
-    node.style.backgroundColor = '#0033dd';
+//    alert(node);
+//    node.style.backgroundColor = '#0033dd';
 
 //    var numberError = 0;
     var idError = "name-error";
