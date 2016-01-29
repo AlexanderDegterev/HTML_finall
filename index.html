@@ -41,11 +41,15 @@
                 slider.stopAuto();
 //                slider.startAuto();
 //                div[class*='grap']
-                var test = $("div[name=partnerContent]");
+                var test = $("a[name=navigat]:visible");
+                var testL = $("a[name=navigat]:visible").length;
+//                test.text('werom');
+                alert(testL);
                 if (test.is(':visible')) {
                     var testID = test.attr('id');
-                    alert(testID+'-TESTID')
-//                    alert('YES');
+                    var btnId2 = $(".toggle#"+test.attr('id'));
+//                    btnId2.text('werom');
+//                    alert(btnId2);
                     test.slideUp();
                 }
 //                test.slideUp();
@@ -69,12 +73,14 @@
 //                $(".content" + $(this).attr('id')).stop().slideToggle("slow");
                 if (hBlock.is(':visible')) {
                     btnId.text('werom');
+                    $(".content" + $(this).attr('id')).stop().slideUp();
 //                    $(".toggle2").text('w');
                 } else if (hBlock.is(':hidden')) {
                     btnId.text('vssel');
+                    $(".content" + $(this).attr('id')).stop().slideDown();
 //                    $(".toggle2").text('v');
                 }
-                $(".content" + $(this).attr('id')).stop().slideDown();
+//                $(".content" + $(this).attr('id')).stop().slideDown();
 //                $(".content" + $(this).attr('id')).stop().slideToggle("slow");
 
                 //$(".tabs").css("min-height", "850px")
@@ -416,7 +422,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" href="#">werom</a>
+                                        <a class="toggle" name="navigat" href="#">werom</a>
                                         <ul class="menu">
                                             <li><a href="#">Home</a></li>
                                             <li><a href="#">About</a></li>
@@ -439,7 +445,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" id="hp">werom</a><!--<span class="toggle2">w</span>-->
+                                        <a class="toggle" name="navigat" id="hp">werom</a><!--<span class="toggle2">w</span>-->
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
