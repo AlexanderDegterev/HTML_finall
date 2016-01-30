@@ -92,6 +92,7 @@ $(document).ready(function(){
 });
 
 
-$(window).resize(function(){	
+$(window).resize(function(){
+    $(".menu-mobile").slideUp();
 	//alert('Изменился размер окна');
 });

@@ -37,6 +37,31 @@
                 auto: true
             });
 
+
+//  Hide phone number
+            $(".mobInput").click(function () {
+                var query = Modernizr.mq('(max-width: 360px)');
+                if (query) {
+                    jQuery('.navbar-contact:has(p)').hide();
+                    return false;
+                }
+            });
+// Shom phone number
+            jQuery(document).click(function(){ jQuery(".navbar-contact:has(p)").slideDown(1000); });
+
+            $(document).click(function () {
+                var inputMobWidth = $('.mobInput').css('width');
+//                alert(inputMobWidth);
+                if (inputMobWidth < 201) {
+                    $(".navbar-contact").css("display", "block");
+                }
+            });
+
+            //shom mobile menu
+            $(".button_mobile_menu").click(function () {
+                $(".menu-mobile").slideToggle();
+            });
+
             $(".toggle").click(function (e) {
                 slider.stopAuto();
                 var X = e.pageX;
@@ -71,7 +96,7 @@
         });
     </script>
     <script type="text/javascript">
-        jQuery(function($){
+        jQuery(function ($) {
             $("#phone").mask("+375(99) 999-99-99");
         });
     </script>
@@ -81,94 +106,6 @@
             'wrapAround': true
         })
     </script>
-
-
-    <!--//        $(function(){-->
-
-<!--//            checkWidth();-->
-
-<!--//            $(window).on('resize', function(){-->
-<!--//                checkWidth();-->
-<!--//            });-->
-<!--//        });-->
-<!--//        var slider = $('#bxslider').bxSlider();-->
-<!--//-->
-<!--//        function checkWidth(){-->
-<!--//            $(".width").text($(window).width());-->
-<!--////-->
-<!--//            if ($(window).width() < 800) {-->
-<!--//                $('#bxslider').bxSlider({-->
-<!--//                mode: 'fade',-->
-<!--//                captions: false-->
-<!--//            });-->
-<!--//            } else {-->
-<!--//                $('#bxslider').destroySlider();-->
-<!--//            }-->
-<!--//        }-->
-<!--//-->
-<!--//        $(window).on("orientationchange load resize", function () {-->
-<!--//            checkWidth();-->
-<!--//        });-->
-
-
-            <!--/*JOB*/-->
-<!--//var slider = $('.bxslider').bxSlider();-->
-<!--//var sld = function() {-->
-<!--//    if ($(window).width() < 800) {-->
-<!--//        $('#bxslider').bxSlider({-->
-<!--//            auto: true,-->
-<!--//            pause: 2000,-->
-<!--//            autoHover: true-->
-<!--//        });-->
-<!--//    } else {-->
-<!--//        $('#bxslider').destroySlider();-->
-<!--//    }-->
-<!--//};-->
-<!--//sld();-->
-<!--//$(window).on("orientationchange load resize", function () {-->
-<!--//            sld();-->
-<!--//        });-->
-
-
-<!--//$(document).ready(function () {-->
-<!--//    $('#bxslider2').bxSlider({-->
-<!--//        mode: 'fade',-->
-<!--//        captions: false,-->
-<!--//        auto: true,-->
-<!--//        autoControls: true,-->
-<!--//        controls: false-->
-<!--//    });-->
-<!--//});-->
-<!--//-->
-<!--//$(document).ready(function () {-->
-<!--//    $('#bxslider3').bxSlider({-->
-<!--//        slideWidth: 210,-->
-<!--//        minSlides: 3,-->
-<!--//        maxSlides: 4,-->
-<!--//        slideMargin: 30,-->
-<!--//        auto:true-->
-<!--//    });-->
-<!--//});-->
-
-
-    <!--<script type="text/javascript">-->
-        <!--(document).ready(function () {-->
-            <!--$('#bxslider3').bxSlider({-->
-                <!--mode: 'fade',-->
-                <!--captions: false-->
-            <!--});-->
-        <!--});-->
-    <!--</script>-->
-
-    <!--<script type="text/javascript">-->
-        <!--$("document").ready(function () {-->
-            <!--$(".toggle").click(function () {-->
-                <!--$(".menu").stop().slideToggle("slow");-->
-                <!--return false-->
-            <!--});-->
-
-        <!--});-->
-    <!--</script>-->
 
 </head>
 <body>
@@ -183,9 +120,9 @@
             </div>
 
             <div class="navbar-search">
-                <form action="#">
-                    <input type="text" class="input" placeholder="Search">
-                    <input type="submit" value="">
+                <form id ="mobileSearch" action="#">
+                    <input type="search" class="mobInput" placeholder="Search">
+                    <!--<input type="submit" value="">-->
                 </form>
             </div>
             <div class="search">
