@@ -63,13 +63,13 @@ common = (function($) {
 			});	
 		}
 
-        $('#bxslider2').bxSlider({
-            mode: 'fade',
-            captions: false,
-            auto: true,
-            autoControls: true,
-            controls: false
-        });
+//        $('#bxslider2').bxSlider({
+//            mode: 'fade',
+//            captions: false,
+//            auto: true,
+//            autoControls: true,
+//            controls: false
+//        });
         /*Перенес в html*/
 //        $('#bxslider3').bxSlider({
 //            slideWidth: 222,

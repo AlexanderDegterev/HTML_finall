@@ -29,7 +29,15 @@
     <script src="js/validate.js" async></script>
     <script type="text/javascript">
         $("document").ready(function () {
-            var slider = $('#bxslider3').bxSlider({
+            var slider2 = $('#bxslider2').bxSlider({
+                mode: 'fade',
+                captions: false,
+                auto: true,
+                autoControls: true,
+                controls: false
+            });
+
+            var slider3 = $('#bxslider3').bxSlider({
                 slideWidth: 239,
                 minSlides: 3,
                 maxSlides: 4,
@@ -37,7 +45,7 @@
                 auto: true
             });
 
-            var slider = $('#bxslider4').bxSlider({
+            var slider4 = $('#bxslider4').bxSlider({
                 slideWidth: 239,
                 minSlides: 3,
                 maxSlides: 4,
@@ -46,7 +54,7 @@
             });
 
 
-//  Hide phone number
+  //  Hide phone number
             $(".mobInput").click(function () {
                 var query = Modernizr.mq('(max-width: 360px)');
                 if (query) {
@@ -54,7 +62,7 @@
                     return false;
                 }
             });
-// Shom phone number
+  // Shom phone number
             jQuery(document).click(function(){ jQuery(".navbar-contact:has(p)").slideDown(1000); });
 
             $(document).click(function () {
@@ -65,19 +73,21 @@
                 }
             });
 
-            //shom mobile menu
+  //shom mobile menu
             $(".button_mobile_menu").click(function () {
                 $(".menu-mobile").slideToggle();
             });
 
             $(".toggle").click(function (e) {
-                slider.stopAuto();
+                slider2.stopAuto();
+                slider3.stopAuto();
+                slider4.stopAuto();
                 var X = e.pageX;
 //                alert(X);
 
                 var toggleVisible = $("a[name=toggleNav]:visible"); // find all buttons with toggle logic
 //                var testL = $("a[name=toggleNav]:visible").length;
-                toggleVisible.text('werom'); // set more label to the buttons
+                toggleVisible.text('w erom'); // set more label to the buttons
 
                 var contentVisible = $("div[class^='content'][name='partnerContent']:visible");
                 var contentVisibleLength = contentVisible.length;
@@ -90,12 +100,14 @@
                 var linkClickId = $(".toggle#" + $(this).attr('id'));
 //                $(this).text(hBlock.is(':visible') ? 'more' : 'Скрыть');
                 if (contentIdClick.is(':visible')) {
-                    linkClickId.text('werom');
+                    linkClickId.text('w erom');
                     $(".content" + $(this).attr('id')).stop().slideUp();
                     $("div.triangle").css("display","none");
-                    slider.startAuto();
+                    slider2.startAuto();
+                    slider3.startAuto();
+                    slider4.startAuto();
                 } else if (contentIdClick.is(':hidden')) {
-                    linkClickId.text('vssel');
+                    linkClickId.text('v ssel');
                     $(".content" + $(this).attr('id')).stop().slideDown();
                     $("div.triangle").css("margin-left", X+"px").css("display","block");
                 }
@@ -130,7 +142,6 @@
             <div class="navbar-search">
                 <form id ="mobileSearch" action="#">
                     <input type="search" class="mobInput" placeholder="Search">
-                    <!--<input type="submit" value="">-->
                 </form>
             </div>
             <div class="search">
@@ -211,9 +222,7 @@
             <div class="home-content-content">
                 <h2>Conse ctetuer adipiscing morbi.</h2>
 
-                <p>Ipsum sed pharetra gravida. Nullam sit. Lorem ipsum dolor sit amet. Consectetuer adipiscing morbi
-                    comm
-                    odo, ipsum sed pharetra.</p>
+                <p>Ipsum sed pharetra gravida.Nullam sit. Lorem ipsum dolor sit amet. Consectetuer adipiscing morbi commodo, ipsum sed pharetra.</p>
             </div>
 
             <div class="home-content-signature">
@@ -243,7 +252,7 @@
         <li>
             <img src="images/layout/benefit-pic2.png" title="Something" alt="slider"/>
 
-            <h1>Nullam sit lorem dolor.</h1>
+            <h1>Aenean vel ornare sem.</h1>
 
             <p>Lorem ipsum dolor sit amet. Conse cetuer adipiscing morbi com modo, ipsum sed pharetra gravida
                 dolor set.</p>
@@ -254,7 +263,7 @@
         <li>
             <img src="images/layout/benefit-pic3.png" title="Brochure" alt="slider"/>
 
-            <h1>Nullam sit lorem dolor.</h1>
+            <h1>Curabitur sagittis, nisi quis.</h1>
 
             <p>Lorem ipsum dolor sit amet. Conse cetuer adipiscing morbi com modo, ipsum sed pharetra gravida
                 dolor set.</p>
@@ -347,7 +356,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" name="toggleNav" id="ibm" href="#">werom</a>
+                                        <a class="toggle" name="toggleNav" id="ibm">w erom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -364,7 +373,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" name="toggleNav" id="hp">werom</a>
+                                        <a class="toggle" name="toggleNav" id="hp">w erom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -381,7 +390,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" name="toggleNav" id="dell">werom</a>
+                                        <a class="toggle" name="toggleNav" id="dell">w erom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -398,7 +407,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" name="toggleNav" id="cisco" >werom</a>
+                                        <a class="toggle" name="toggleNav" id="cisco" >w erom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -416,13 +425,12 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" name="toggleNav" id="sas">werom</a>
+                                        <a class="toggle" name="toggleNav" id="sas">w erom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
                                 </div>
                             </li>
-
                         </ul>
                         <div class="triangle"></div>
                     </div>
@@ -451,9 +459,8 @@
                                     <h3>IBM</h3>
 
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
-
                                     <nav role="navigation">
-                                        <a class="toggle" name="toggleNav" id="ibm" href="#">werom</a>
+                                        <a class="toggle" name="toggleNav" id="ibm">w erom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -470,7 +477,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" name="toggleNav" id="hp">werom</a>
+                                        <a class="toggle" name="toggleNav" id="hp">w erom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -487,7 +494,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" name="toggleNav" id="dell">werom</a>
+                                        <a class="toggle" name="toggleNav" id="dell">w erom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -504,7 +511,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" name="toggleNav" id="cisco" >werom</a>
+                                        <a class="toggle" name="toggleNav" id="cisco" >w erom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -522,7 +529,7 @@
                                     <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
 
                                     <nav role="navigation">
-                                        <a class="toggle" name="toggleNav" id="sas">werom</a>
+                                        <a class="toggle" name="toggleNav" id="sas">w erom</a>
                                     </nav>
                                     <a class="icon_quote" href="#"></a>
                                     <a class="icon_video" href="#"></a>
@@ -576,6 +583,63 @@
 </div>
 
     <!--END tabs-->
+
+<div class="partner-slider">
+    <div class="partner-slider-wrapper">
+        <ul id="bxslider2">
+            <li>
+                <img src="images/layout/logo-cisco.png" title="Cisco" alt="cisco"/>
+
+                <h3>Cisco</h3>
+
+                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
+
+                <div class="partner-slider-footer">
+
+                    <nav role="navigation">
+                        <a class="toggle" name="toggleNav" id="cisco">w erom</a>
+                    </nav>
+                    <a class="icon_quote" href="#"></a>
+                    <a class="icon_video" href="#"></a>
+                </div>
+            </li>
+            <li>
+                <img src="images/layout/logo-hp.png" title="Hp" alt="hp"/>
+
+                <h3>Hp</h3>
+
+                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
+
+                <div class="partner-slider-footer">
+
+                    <nav role="navigation">
+                        <a class="toggle" name="toggleNav" id="hp">w erom</a>
+                    </nav>
+                    <a class="icon_quote" href="#"></a>
+                    <a class="icon_video" href="#"></a>
+                </div>
+            </li>
+            <li>
+                <img src="images/layout/logo-dell.png" title="Dell" alt="Dell"/>
+
+                <h3>DELL</h3>
+
+                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
+
+                <div class="partner-slider-footer">
+
+                    <nav role="navigation">
+                        <a class="toggle" name="toggleNav" id="dell">w erom</a>
+                    </nav>
+                    <a class="icon_quote" href="#"></a>
+                    <a class="icon_video" href="#"></a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
 
 <div class="partner-content">
     <div class="wrapper-desc">
@@ -650,7 +714,7 @@
             <div class="video-content">
                 <video src="video/Blinky-Bill-the-Movie.mp4" autobuffer controls poster="images/content/blinkyBill.jpg">
                     <!--<p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download-->
-                        <!--the video</a> instead.</p>-->
+                    <!--the video</a> instead.</p>-->
                 </video>
             </div>
         </div>
@@ -677,81 +741,6 @@
     </div>
 </div>
 <!--End content hidden-->
-
-
-<div class="partner-slider">
-    <div class="partner-slider-wrapper">
-        <ul id="bxslider2">
-            <li>
-                <img src="images/layout/logo-cisco.png" title="Cisco" alt="cisco"/>
-
-                <h3>Cisco</h3>
-
-                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
-
-                <div class="partner-slider-footer">
-
-                    <nav role="navigation">
-                        <a class="toggle" href="#">more<span>w</span></a>
-                        <ul class="menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <a class="icon_video" href="#"></a>
-                    <a class="icon_quote" href="#"></a>
-                </div>
-            </li>
-            <li>
-                <img src="images/layout/logo-hp.png" title="Hp" alt="hp"/>
-
-                <h3>Hp</h3>
-
-                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
-
-                <div class="partner-slider-footer">
-
-                    <nav role="navigation">
-                        <a class="toggle" href="#">more<span>w</span></a>
-                        <ul class="menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <a class="icon_video" href="#"></a>
-                    <a class="icon_quote" href="#"></a>
-                </div>
-            </li>
-            <li>
-                <img src="images/layout/logo-dell.png" title="Hp" alt="hp"/>
-
-                <h3>DELL</h3>
-
-                <p>Lorem ipsum dolor sit amet nullam amen etqer dolor est...</p>
-
-                <div class="partner-slider-footer">
-
-                    <nav role="navigation">
-                        <a class="toggle" href="#">more<span>w</span></a>
-                        <ul class="menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <a class="icon_video" href="#"></a>
-                    <a class="icon_quote" href="#"></a>
-                </div>
-            </li>
-
-        </ul>
-    </div>
-</div>
 
 <div class="lightbox-template">
     <div class="wrapper-desc">
@@ -792,10 +781,7 @@
             <div class="form-left">
                 <div class="form-name">
                     <label for="name">Your Name:</label>
-                    <input type="text" name="name" placeholder="Your Name*"/>
-                    <!--<label class="w3-label">Your Name DOWN</label>-->
-                    <!--<p class="error"></p>-->
-                    <!--<h1>12345</h1>-->
+                    <input type="text" name="name" placeholder="Enter Name*"/>
                     <p id="name-error"></p>
                 </div>
 
@@ -808,7 +794,7 @@
                 </div>
                 <div class="form-name">
                     <label for="tel">Your phone number:</label>
-                    <input id="phone" name="tel" pattern="+375 ([0-9]{2}) [0-9]{3}-[0-9]{2}-[0-9]{2}" type="tel" placeholder="Your phonenumber*">
+                    <input id="phone" name="tel" pattern="+375 ([0-9]{2}) [0-9]{3}-[0-9]{2}-[0-9]{2}" type="tel" placeholder="Enter phonenumber*">
                     <!--<p class="error"></p>-->
 
                 </div>
@@ -817,9 +803,9 @@
             <div class="form-right">
                 <div class="form-name">
                     <label for="email">Your Email:</label>
-                    <input type="text" name="email" value="Your Email*"
-                           onfocus="if (this.value == 'Your Email*') {this.value=''}"
-                           onblur="if (this.value=='') this.value = this.value=''/*this.defaultValue*/"/>
+                    <input type="text" name="email" value="Enter Email*"
+                           onfocus="if (this.value == 'Enter Email*') {this.value=''}"
+                           onblur="if (this.value=='') this.value = this.defaultValue"/>
                     <!--<p class="error"></p>-->
                     <p id="email-error"></p>
                 </div>
@@ -846,6 +832,7 @@
             </div>
 
             <div class="form-message">
+                <label for="msg">Your message:</label>
                 <textarea name="msg" onclick="this.value=''">Your message*</textarea>
                 <p id="msg-error"></p>
             </div>

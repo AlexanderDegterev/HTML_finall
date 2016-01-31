@@ -384,3 +384,12 @@
     float: left;
     text-align: center;
 }
+
+@media screen and (max-width: 480px) {
+    .bx-wrapper h1 {
+        font: 2em/35px "bentonsans-bold",sans-serif;
+    }
+    .bx-wrapper p {
+        font: 1.2em/25px "bentonsans",sans-serif;
+    }
+}
