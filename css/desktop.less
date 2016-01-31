@@ -590,6 +590,7 @@
     min-height: 500px;  //850
     position: relative;
     text-align: center;
+    clear: both;
     .tab {
       display: inline-block;
       margin-top: 1%;
@@ -605,6 +606,19 @@
     [type=radio] {
       display: none;
     }
+
+      .content {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        height: 428px;
+        background-color: #f1f1f1;
+        p {
+          margin-top: 3%;
+        }
+      }
+
       [type=radio]:checked ~ label {
         background: #f0ab00;
         color: #ffffff;
@@ -615,12 +629,7 @@
       [type=radio]:checked ~ label ~ .content {
         z-index: 1;
       }
-    .content {
-      position: absolute;
-      top: 65px;
-      left: 0;
-      width: 100%;
-    }
+
     }
   }
 
@@ -855,7 +864,7 @@
     clear: both;
   }
 
-  .form-name input, .form-message textarea{
+  .form-name input, .form-message textarea, .form-name select {
     width: 96%;
     height: 35px;
     margin-bottom: 5%;
@@ -865,6 +874,15 @@
     background: #273A71 none repeat scroll 0% 0%;
     border: 0px none;
     border-radius: 3px;
+  }
+
+  .form-name select {
+    height: 54px;
+    width: 101%;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
   }
 
   .form-name label {
@@ -898,7 +916,7 @@
     border-radius: 5px;
     color: #ffffff;
     display: block;
-    font: 400 1em/3em "BentonSans-Bold",sans-serif;
+    font: 400 24px/40px Titillium Web,sans-serif;
     position: relative;
     text-align: center;
     vertical-align: middle;
@@ -915,7 +933,7 @@
   #name-error,#email-error,#pass-error,#msg-error {
     position: absolute;
     color: red;
-    margin-top: -27px;
+    margin-top: -20px;
   }
 
   .error {
