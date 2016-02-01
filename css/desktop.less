@@ -22,6 +22,31 @@
     transition: @prop @time @ease;
   }
   /*END MIXIN*/
+
+  /*Sprite*/
+  .stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+  }
+
+  .sprite {
+    background-image: url(../images/layout/spritesheet.png);    background-repeat: no-repeat;
+    display: block;
+
+    &.sprite-icon_ask_expert {
+      .stitches-sprite(-5px, -5px, 39px, 39px);
+    }
+
+    &.sprite-icon_email {
+      .stitches-sprite(-54px, -5px, 52px, 32px);
+    }
+
+    &.sprite-icon_phone {
+      .stitches-sprite(-54px, -47px, 41px, 41px);
+    }
+  }
+  /*end sprite*/
   .hidden-block {
     display: none;
   }
@@ -394,7 +419,7 @@
     margin-bottom: 0%;
     font: normal 24px 'BentonSans' , sans-serif;
     h2 {
-      margin: 6% 0 0 6%;
+      margin: 7% 0 0 6%;
       font: 0.8em 'BentonSans-Bold' , sans-serif;
     }
     p {
@@ -488,6 +513,7 @@
     display: inline-block;
     text-align: left;
     width: 24%;
+    min-width: 290px;
     margin: 3% 2% 0;
     background-color: #ffffff;
   }
@@ -724,20 +750,20 @@
 
   .icon_quote {
     position: absolute;
-    margin: 6% 19% 0% 19%;
+    margin: 10% 19% 0% 10%;
     display: inline-block;
-    height: 54px;
-    width: 54px;
-    background: url("../images/layout/icon_quote_desktop.png") no-repeat center;
+    height: 22px;
+    width: 25px;
+    background: url("../images/layout/spritesheet_slider.png") no-repeat -5px -61px;
   }
 
   .icon_video {
     position: absolute;
-    margin: 5% 2% 0% 38%;
+    margin: 9% 2% 0% 27%;
     display: inline-block;
-    height: 54px;
-    width: 54px;
-    background: url("../images/layout/icon_video_desktop.png") no-repeat center;
+    height: 22px;
+    width: 23px;
+    background: url("../images/layout/spritesheet_slider.png") no-repeat -120px -5px;
   }
 
   .triangle {
@@ -1046,26 +1072,26 @@
       }
     }
     .phone:before {
-      height: 55px;
-      width: 55px;
+      height: 41px;
+      width: 41px;
       content: " ";
       text-shadow: none;
-      margin: 1% 2%;
+      margin: 2% 3%;
       position: absolute;
-      background: url("../images/layout/icon_phone.png") no-repeat;
+      background: url("../images/layout/spritesheet.png") no-repeat -54px -47px;
     }
     .email {
       display: none;
       width: 30%;
     }
     .email:before {
-      height: 55px;
-      width: 70px;
+      height: 32px;
+      width: 52px;
       content: " ";
       text-shadow: none;
       margin: -2% 0 0 -25%;
       position: absolute;
-      background: url("../images/layout/icon_email.png") no-repeat;
+      background: url("../images/layout/spritesheet.png") no-repeat -54px -5px;
     }
 
     .ask-sap {
@@ -1092,13 +1118,13 @@
       }
     }
     .ask-sap:before {
-      height: 55px;
-      width: 70px;
+      height: 32px;
+      width: 52px;
       content: " ";
       text-shadow: none;
-      margin: 1% 1%;
+      margin: 2% 2%;
       position: absolute;
-      background: url("../images/layout/icon_email.png") no-repeat;
+      background: url("../images/layout/spritesheet.png") no-repeat -54px -5px;
     }
 
     .ask-expert {
@@ -1124,13 +1150,13 @@
       }
     }
     .ask-expert:before {
-      height: 55px;
-      width: 70px;
+      height: 39px;
+      width: 39px;
       content: " ";
       text-shadow: none;
-      margin: 1% 2%;
+      margin: 2% 3%;
       position: absolute;
-      background: url("../images/layout/icon_ask_expert.png") no-repeat;
+      background: url("../images/layout/spritesheet.png") no-repeat -5px -5px;
     }
   }
 

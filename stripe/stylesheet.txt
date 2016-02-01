@@ -1,0 +1,22 @@
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.sprite {
+    background-image: url(spritesheet.png);    background-repeat: no-repeat;
+    display: block;
+
+    &.sprite-icon_ask_expert {
+        .stitches-sprite(-5px, -5px, 39px, 39px);
+    }
+
+    &.sprite-icon_email {
+        .stitches-sprite(-54px, -5px, 52px, 32px);
+    }
+
+    &.sprite-icon_phone {
+        .stitches-sprite(-54px, -47px, 41px, 41px);
+    }
+}
