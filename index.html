@@ -757,27 +757,27 @@
     </div>
 </div>
 
-<div class="validation-form">
-    <div class="wrapper-desc">
-        <h1>Validation form(JQuery)</h1>
+<!--<div class="validation-form">-->
+    <!--<div class="wrapper-desc">-->
+        <!--<h1>Validation form(JQuery)</h1>-->
 
-        <form id="sampleForm" method="post" action="" novalidate>
-            <div class="message"></div>
-            <input type="text" name="firstName" data-label="First Name" required/>
-            <input type="text" name="lastName" data-label="Last Name" required/>
-            <input type="email" name="lastName" data-label="Email" required/>
-            <input type="password" name="lastName" data-label="Password" required/>
-            <select class="select-country" form="sampleForm" required>
-                <option disabled selected>Choose your country</option>
-                <option value="1">Belarus</option>
-                <option value="2">USA</option>
-                <option value="3">Russia</option>
-            </select>
-            <input type="checkbox" name="agreements" data-label="I agree" required>
-            <input type="submit" value="Submit"/>
-        </form>
-    </div>
-</div>
+        <!--<form id="sampleForm" method="post" action="" novalidate>-->
+            <!--<div class="message"></div>-->
+            <!--<input type="text" name="firstName" data-label="First Name" required/>-->
+            <!--<input type="text" name="lastName" data-label="Last Name" required/>-->
+            <!--<input type="email" name="lastName" data-label="Email" required/>-->
+            <!--<input type="password" name="lastName" data-label="Password" required/>-->
+            <!--<select class="select-country" form="sampleForm" required>-->
+                <!--<option disabled selected>Choose your country</option>-->
+                <!--<option value="1">Belarus</option>-->
+                <!--<option value="2">USA</option>-->
+                <!--<option value="3">Russia</option>-->
+            <!--</select>-->
+            <!--<input type="checkbox" name="agreements" data-label="I agree" required>-->
+            <!--<input type="submit" value="Submit"/>-->
+        <!--</form>-->
+    <!--</div>-->
+<!--</div>-->
 
 <div class="already-partner">
     <div class="wrapper-desc">
@@ -795,25 +795,29 @@
 </div>
 
 <div class="contact-bar">
-    <div class="wrapper-desc">
+    <div class="wrapper-desc border-top">
         <div class="phone">
-            <!--<h3>+1-888-528-8892</h3>-->
-            <a href="tel: +18885288892">+1-888-528-8892</a>
+            <div class="grid__item">
+                <a class="link link--surinami" href="tel: +18885288892"><span data-letters-l="+1-888-52" data-letters-r="8-8892">+1-888-528-8892</span></a>
+            </div>
+            <!--<a href="tel: +18885288892">+1-888-528-8892</a>-->
             <p>Call us</p>
         </div>
         <div class="email">
-            <!--<h3>Email</h3>-->
             <a href="mailto: example@mail.ru">Email</a>
         </div>
         <div class="ask-sap">
-            <!--<h3>Ask SAP HANA</h3>-->
-            <a href="mailto: example@mail.ru">Ask SAP HANA</a>
+            <div class="grid__item">
+                <a class="link link--surinami" href="mailto: example@mail.ru"><span data-letters-l="Ask SAP" data-letters-r="HANA">Ask SAP HANA</span></a>
+            <!--<a href="mailto: example@mail.ru">Ask SAP HANA</a>-->
+            </div>
             <p>Connect with experts via e-mail.</p>
         </div>
         <div class="ask-expert">
-            <!--<h3>Ask an Expert</h3>-->
-            <!--<i class="sprite sprite-icon_ask_expert"></i>-->
-            <a href="skype: someskype?call">Ask an Expert</a>
+            <div class="grid__item">
+                <a class="link link--surinami" href="skype: someskype?call"><span data-letters-l="Ask an" data-letters-r="Expert">Ask an Expert</span></a>
+            <!--<a href="skype: someskype?call">Ask an Expert</a>-->
+            </div>
             <p>Start a discussion with community experts.</p>
         </div>
     </div>
@@ -865,13 +869,17 @@
             slideMargin: 30,
             auto: true
         });
-
+        if (Modernizr.mq("screen and (max-width:360px)")) {
+//            $('.navbar-contact:has(p)').hide();
+//            alert("hello");
+        }
 
         //  Hide phone number
         $(".mobInput").click(function () {
             var query = Modernizr.mq('(max-width: 360px)');
             if (query) {
-                jQuery('.navbar-contact:has(p)').hide();
+//                alert('YES');
+                $('.navbar-contact:has(p)').hide();
                 return false;
             }
         });
