@@ -5,49 +5,6 @@
 common = (function($) {
     var o = {};
 
-//    $("document").ready(function () {
-//        $(".toggle").click(function () {
-//            $(".content" + $(this).attr('id')).stop().slideToggle("slow");
-////                            $(".tabs").css("min-height", "850px")
-//
-//            return false
-//        });
-//
-//    });
-
-	// Final version
-	o.showTopNavigation = function(){
-		var $wrapper = $('.hidden-block-wrapper');
-		var $button = $wrapper.find('> .show-block');		
-        
-		$button.click(function(){
-			var $currentBlock = $(this).find('+ .hidden-block');			
-			
-			if ($currentBlock.hasClass('visible')) {				
-				panelToggle($currentBlock); // Current block is hiding
-			} else {				
-				var $activeBlock = $wrapper.find('.visible');
-				var isActiveBlock = $activeBlock.size() > 0;
-				
-				if (isActiveBlock) {
-					panelToggle($activeBlock); // Active block is hiding
-				}
-				
-				panelToggle($currentBlock); // Current block is appearing
-			}			
-        });
-		
-		function panelToggle(panel){
-			var button = panel.parent().find('> .show-block');
-			
-			panel.slideToggle(function(){
-				panel.toggleClass('visible').removeAttr('style');
-			});
-			button.toggleClass('active');
-		}
-    };
-
-    // I
 	o.sliderInitialization = function() {
 		var query = Modernizr.mq('(max-width: 800px)');
 		
@@ -57,29 +14,105 @@ common = (function($) {
                 captions: false
 			});
 			
-			$('.bxslider2').bxSlider({
-			  mode: 'fade',
-			  captions: false
-			});	
 		}
 
-//        $('#bxslider2').bxSlider({
-//            mode: 'fade',
-//            captions: false,
-//            auto: true,
-//            autoControls: true,
-//            controls: false
-//        });
-        /*Перенес в html*/
-//        $('#bxslider3').bxSlider({
-//            slideWidth: 222,
-//            minSlides: 3,
-//            maxSlides: 4,
-//            slideMargin: 10,
-//            auto:true
-//        });
+        var slider2 = $('#bxslider2').bxSlider({
+            mode: 'fade',
+            captions: false,
+            auto: true,
+            autoControls: true,
+            controls: false
+        });
+
+        var slider3 = $('#bxslider3').bxSlider({
+            slideWidth: 239,
+            minSlides: 3,
+            maxSlides: 4,
+            slideMargin: 30,
+            auto: true
+        });
+
+        var slider4 = $('#bxslider4').bxSlider({
+            slideWidth: 239,
+            minSlides: 3,
+            maxSlides: 4,
+            slideMargin: 30,
+            auto: true
+        });
+
+        /*Show and hide content under slider*/
+        $(".toggle").click(function (e) {
+            slider2.stopAuto();
+            slider3.stopAuto();
+            slider4.stopAuto();
+//            $('#bxslider4').bxSlider().stopAuto();
+            var X = e.pageX;
+//                alert(X);
+
+            var toggleVisible = $("a[name=toggleNav]:visible"); // find all buttons with toggle logic
+//                var testL = $("a[name=toggleNav]:visible").length;
+            toggleVisible.text('w erom'); // set more label to the buttons
+
+            var contentVisible = $("div[class^='content'][name='partnerContent']:visible");
+            var contentVisibleLength = contentVisible.length;
+//                alert(contentLength+" - Visible content");
+            if (contentVisibleLength != 0) {
+                contentVisible.stop().slideUp();
+                $("div.triangle").css("display","none");
+            }
+            var contentIdClick = $(".content" + $(this).attr('id'));
+            var linkClickId = $(".toggle#" + $(this).attr('id'));
+//                $(this).text(hBlock.is(':visible') ? 'more' : 'Скрыть');
+            if (contentIdClick.is(':visible')) {
+                linkClickId.text('w erom');
+                $(".content" + $(this).attr('id')).stop().slideUp();
+                $("div.triangle").css("display","none");
+                slider2.startAuto();
+                slider3.startAuto();
+                slider4.startAuto();
+            } else if (contentIdClick.is(':hidden')) {
+                linkClickId.text('v ssel');
+                $(".content" + $(this).attr('id')).stop().slideDown();
+                $("div.triangle").css("margin-left", X+"px").css("display","block");
+            }
+            return false
+        });
 
 	};
+
+    o.hidePhoneNumber = function() {
+        $(".mobInput").click(function () {
+            var query = Modernizr.mq('(max-width: 360px)');
+            if (query) {
+                $('.navbar-contact:has(p)').hide();
+                return false;
+            }
+        });
+    }
+
+    o.shomPhoneNumber = function() {
+        $(document).click(function(){
+            $(".navbar-contact:has(p)").slideDown(1000); });
+    }
+
+    o.showMobileMenu = function() {
+        $(".button_mobile_menu").click(function () {
+            $(".menu-mobile").slideToggle();
+        });
+    }
+
+    o.phoneMask = function () {
+//        jQuery(function ($) {
+            $("#phone").mask("+375(99) 999-99-99");
+//        });
+    }
+
+    o.lightBoxInitialization = function () {
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        })
+    }
 
     return o;
 })($);
@@ -87,8 +120,13 @@ common = (function($) {
 
 
 $(document).ready(function(){	
-	common.showTopNavigation();
+//	common.showTopNavigation();
 	common.sliderInitialization();
+    common.hidePhoneNumber();
+    common.shomPhoneNumber();
+    common.showMobileMenu();
+    common.phoneMask();
+    common.lightBoxInitialization();
 });
 
 
